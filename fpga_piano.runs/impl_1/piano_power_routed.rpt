@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Sun Dec 15 14:45:16 2024
+| Date             : Sun Dec 15 15:27:03 2024
 | Host             : DESKTOP-7070VCE running 64-bit major release  (build 9200)
 | Command          : report_power -file piano_power_routed.rpt -pb piano_power_summary_routed.pb -rpx piano_power_routed.rpx
 | Design           : piano
@@ -29,20 +29,20 @@ Table of Contents
 1. Summary
 ----------
 
-+--------------------------+--------------+
-| Total On-Chip Power (W)  | 8.750        |
-| Design Power Budget (W)  | Unspecified* |
-| Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 8.583        |
-| Device Static (W)        | 0.167        |
-| Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 45.1         |
-| Junction Temperature (C) | 64.9         |
-| Confidence Level         | Low          |
-| Setting File             | ---          |
-| Simulation Activity File | ---          |
-| Design Nets Matched      | NA           |
-+--------------------------+--------------+
++--------------------------+----------------------------------+
+| Total On-Chip Power (W)  | 23.159 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                     |
+| Power Budget Margin (W)  | NA                               |
+| Dynamic (W)              | 22.362                           |
+| Device Static (W)        | 0.797                            |
+| Effective TJA (C/W)      | 4.6                              |
+| Max Ambient (C)          | 0.0                              |
+| Junction Temperature (C) | 125.0                            |
+| Confidence Level         | Low                              |
+| Setting File             | ---                              |
+| Simulation Activity File | ---                              |
+| Design Nets Matched      | NA                               |
++--------------------------+----------------------------------+
 * Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
 
 
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.444 |      152 |       --- |             --- |
-|   LUT as Logic |     0.331 |       61 |     63400 |            0.10 |
-|   CARRY4       |     0.072 |       17 |     15850 |            0.11 |
-|   Register     |     0.034 |       55 |    126800 |            0.04 |
-|   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |        8 |       --- |             --- |
-| Signals        |     0.480 |      131 |       --- |             --- |
-| I/O            |     7.659 |        6 |       210 |            2.86 |
-| Static Power   |     0.167 |          |           |                 |
-| Total          |     8.750 |          |           |                 |
+| Slice Logic    |     7.350 |     1088 |       --- |             --- |
+|   LUT as Logic |     6.295 |      602 |     63400 |            0.95 |
+|   CARRY4       |     0.828 |      156 |     15850 |            0.98 |
+|   Register     |     0.214 |      251 |    126800 |            0.20 |
+|   BUFG         |     0.012 |        2 |        32 |            6.25 |
+|   Others       |     0.000 |       56 |       --- |             --- |
+| Signals        |     7.009 |     1014 |       --- |             --- |
+| I/O            |     8.004 |       18 |       210 |            8.57 |
+| Static Power   |     0.797 |          |           |                 |
+| Total          |    23.159 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,16 +71,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     1.004 |       0.932 |      0.072 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.305 |       0.280 |      0.025 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     2.169 |       2.165 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |    14.977 |      14.414 |      0.563 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.384 |       0.291 |      0.093 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     2.254 |       2.250 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
@@ -135,13 +135,37 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+------------------+-----------+
-| Name             | Power (W) |
-+------------------+-----------+
-| piano            |     8.583 |
-|   dac_inst       |     0.098 |
-|   note_proc_inst |     0.650 |
-|     note_inst    |     0.643 |
-+------------------+-----------+
++------------------------------+-----------+
+| Name                         | Power (W) |
++------------------------------+-----------+
+| piano                        |    22.362 |
+|   dac_inst                   |     0.156 |
+|   genblk1[0].note_proc_inst  |     1.206 |
+|     note_inst                |     1.196 |
+|   genblk1[10].note_proc_inst |     1.718 |
+|     note_inst                |     1.709 |
+|   genblk1[11].note_proc_inst |     0.884 |
+|     note_inst                |     0.876 |
+|   genblk1[12].note_proc_inst |     0.817 |
+|     note_inst                |     0.809 |
+|   genblk1[1].note_proc_inst  |     1.912 |
+|     note_inst                |     1.904 |
+|   genblk1[2].note_proc_inst  |     1.498 |
+|     note_inst                |     1.490 |
+|   genblk1[3].note_proc_inst  |     0.753 |
+|     note_inst                |     0.744 |
+|   genblk1[4].note_proc_inst  |     0.857 |
+|     note_inst                |     0.849 |
+|   genblk1[5].note_proc_inst  |     1.478 |
+|     note_inst                |     1.471 |
+|   genblk1[6].note_proc_inst  |     0.739 |
+|     note_inst                |     0.733 |
+|   genblk1[7].note_proc_inst  |     0.823 |
+|     note_inst                |     0.817 |
+|   genblk1[8].note_proc_inst  |     0.623 |
+|     note_inst                |     0.615 |
+|   genblk1[9].note_proc_inst  |     0.595 |
+|     note_inst                |     0.586 |
++------------------------------+-----------+
 
 

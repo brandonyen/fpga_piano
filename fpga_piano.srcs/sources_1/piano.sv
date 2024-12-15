@@ -1,13 +1,27 @@
 module piano (
     input logic clk_50MHz,           // system clock (50 MHz)
-    input logic [12:0] switch,
+    input logic [12:0] switches,
     output logic dac_MCLK,           // outputs to PMODI2L DAC
     output logic dac_LRCK,           // left-right clock
     output logic dac_SCLK,           // serial clock
     output logic dac_SDIN            // serial data input to DAC
 );
 
-    localparam logic [13:0] c_note = 14'd351;  
+    localparam logic [13:0] pitches [0:12] = {
+        14'd351, // c4
+        14'd372, // c#4
+        14'd394, // d4
+        14'd418, // eb4
+        14'd442, // e4
+        14'd469, // f4
+        14'd497, // f#4
+        14'd526, // g4
+        14'd557, // g#4
+        14'd591, // a4
+        14'd626, // bb4
+        14'd663, // b4
+        14'd702 // c5
+    };
 
     // Signals for components and timing
     logic [19:0] tcount;     // 20-bit timing counter
@@ -48,13 +62,30 @@ module piano (
         .SDATA(dac_SDIN)
     );
     
-    note_proc note_proc_inst (
-        .pitch(c_note),
-        .wclk(slo_clk),
-        .audio_clk(audio_CLK),
-        .active(switch[0]),
-        .audio_data(data_L)
-    );
+    generate
+        genvar i;
+            for (i = 0; i < 13; i++) begin
+                note_proc note_proc_inst (
+                        .pitch(pitches[i]),
+                        .wclk(slo_clk),
+                        .audio_clk(audio_CLK),
+                        .active(switches[i]),
+                        .audio_data(note_audio[i])
+                );
+            end
+    endgenerate
+    
+    logic signed [15:0] note_audio [12:0];
+    logic signed [15:0] mixed_audio;
+
+    always_comb begin
+        mixed_audio = 16'd0; 
+        for (int j = 0; j < 13; j++) begin
+            mixed_audio += note_audio[j];
+        end
+    end
+
+    assign data_L = mixed_audio; 
 
     // Duplicate left data to right channel
     assign data_R = data_L;
