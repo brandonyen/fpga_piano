@@ -1,4 +1,4 @@
-module tone (
+module note (
     input logic clk,                       // 48.8 kHz audio sampling clock
     input logic [13:0] pitch,              // frequency (in units of 0.745 Hz)
     output logic signed [15:0] data        // signed triangle wave out

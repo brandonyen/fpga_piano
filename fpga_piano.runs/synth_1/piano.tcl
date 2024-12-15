@@ -76,8 +76,8 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
   C:/Users/Brandon/fpga_piano/fpga_piano.srcs/sources_1/dac_if.sv
-  C:/Users/Brandon/fpga_piano/fpga_piano.srcs/sources_1/new/tone.sv
-  C:/Users/Brandon/fpga_piano/fpga_piano.srcs/sources_1/new/wail.sv
+  C:/Users/Brandon/fpga_piano/fpga_piano.srcs/sources_1/note.sv
+  C:/Users/Brandon/fpga_piano/fpga_piano.srcs/sources_1/note_proc.sv
   C:/Users/Brandon/fpga_piano/fpga_piano.srcs/sources_1/piano.sv
 }
 OPTRACE "Adding files" END { }

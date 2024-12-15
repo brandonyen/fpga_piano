@@ -1,13 +1,13 @@
 module piano (
     input logic clk_50MHz,           // system clock (50 MHz)
+    input logic [12:0] switch,
     output logic dac_MCLK,           // outputs to PMODI2L DAC
     output logic dac_LRCK,           // left-right clock
     output logic dac_SCLK,           // serial clock
     output logic dac_SDIN            // serial data input to DAC
 );
 
-    // Constants for lower and upper pitch limits, and wailing speed
-    localparam logic [13:0] c_note = 14'd351;  // lower limit of siren = 344 (256 Hz)
+    localparam logic [13:0] c_note = 14'd351;  
 
     // Signals for components and timing
     logic [19:0] tcount;     // 20-bit timing counter
@@ -48,12 +48,11 @@ module piano (
         .SDATA(dac_SDIN)
     );
     
-    wail wail_inst (
+    note_proc note_proc_inst (
         .pitch(c_note),
-        .wspeed(wail_speed),
         .wclk(slo_clk),
         .audio_clk(audio_CLK),
-        .active(1),
+        .active(switch[0]),
         .audio_data(data_L)
     );
 

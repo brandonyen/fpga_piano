@@ -1,6 +1,5 @@
-module wail (
+module note_proc (
     input logic [13:0] pitch,
-    input logic [7:0] wspeed,              // speed of wail in pitch units/wclk
     input logic wclk, audio_clk, active,                     // wailing clock (47.6 Hz)
     output logic signed [15:0] audio_data  // output audio sequence (wailing tone)
 );
@@ -9,7 +8,7 @@ module wail (
     logic [13:0] curr_pitch;               // current wailing pitch
 
     // Instance of the tone module
-    tone tgen (
+    note note_inst (
         .clk(audio_clk),
         .pitch(curr_pitch),
         .data(audio_data)
