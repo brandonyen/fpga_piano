@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1734294257" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/siren.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1734303014" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/siren.dcp">
   <File Type="PA-TCL" Name="piano.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="piano_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="piano_reports.tcl"/>
@@ -12,13 +12,6 @@
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/dac_if.sv">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/note.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

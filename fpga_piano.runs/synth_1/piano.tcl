@@ -58,6 +58,7 @@ if {$::dispatch::connected} {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -76,7 +77,6 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
   C:/Users/Brandon/fpga_piano/fpga_piano.srcs/sources_1/dac_if.sv
-  C:/Users/Brandon/fpga_piano/fpga_piano.srcs/sources_1/note.sv
   C:/Users/Brandon/fpga_piano/fpga_piano.srcs/sources_1/note_proc.sv
   C:/Users/Brandon/fpga_piano/fpga_piano.srcs/sources_1/piano.sv
 }

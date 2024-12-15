@@ -7,18 +7,13 @@ module piano (
     output logic dac_SDIN            // serial data input to DAC
 );
 
-    localparam logic [13:0] pitches [0:12] = {
+    localparam logic [13:0] pitches [0:7] = {
         14'd351, // c4
-        14'd372, // c#4
         14'd394, // d4
-        14'd418, // eb4
         14'd442, // e4
         14'd469, // f4
-        14'd497, // f#4
         14'd526, // g4
-        14'd557, // g#4
         14'd591, // a4
-        14'd626, // bb4
         14'd663, // b4
         14'd702 // c5
     };
@@ -27,7 +22,7 @@ module piano (
     logic [19:0] tcount;     // 20-bit timing counter
     logic signed [15:0] data_L, data_R;  // 16-bit signed audio data
     logic dac_load_L, dac_load_R;    // DAC load signals
-    logic slo_clk, sclk, audio_CLK;  // clocks
+    logic sclk, audio_CLK;  // clocks
 
     // Timing process (20-bit binary counter to generate timing signals)
     always_ff @(posedge clk_50MHz) begin
@@ -50,7 +45,6 @@ module piano (
     assign dac_LRCK = audio_CLK;    // left-right clock for DAC
     assign sclk = tcount[4];         // serial clock (1.56 MHz)
     assign dac_SCLK = sclk;         // serial data clock
-    assign slo_clk = tcount[19];    // clock to control wailing tone (47.6 Hz)
 
     // Instantiate DAC interface (dac_if module)
     dac_if dac_inst (
@@ -64,10 +58,9 @@ module piano (
     
     generate
         genvar i;
-            for (i = 0; i < 13; i++) begin
+            for (i = 0; i < 8; i++) begin
                 note_proc note_proc_inst (
                         .pitch(pitches[i]),
-                        .wclk(slo_clk),
                         .audio_clk(audio_CLK),
                         .active(switches[i]),
                         .audio_data(note_audio[i])
@@ -75,17 +68,23 @@ module piano (
             end
     endgenerate
     
-    logic signed [15:0] note_audio [12:0];
+    logic signed [15:0] note_audio [7:0];
     logic signed [15:0] mixed_audio;
+    logic signed [15:0] scaled_audio;
 
     always_comb begin
         mixed_audio = 16'd0; 
-        for (int j = 0; j < 13; j++) begin
+        for (int j = 0; j < 8; j++) begin
             mixed_audio += note_audio[j];
         end
+        
+        scaled_audio = mixed_audio >>> 1;  // Scale down the audio
+        
+        if (scaled_audio > 16383) scaled_audio = 16383;
+        if (scaled_audio < -16383) scaled_audio = -16383;
     end
 
-    assign data_L = mixed_audio; 
+    assign data_L = scaled_audio; 
 
     // Duplicate left data to right channel
     assign data_R = data_L;

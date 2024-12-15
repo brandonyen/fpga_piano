@@ -27,13 +27,3 @@ set_property src_info {type:XDC file:1 line:19 export:INPUT save:INPUT read:READ
 set_property -dict { PACKAGE_PIN U8 IOSTANDARD LVCMOS33 } [get_ports { switches[6] }];
 set_property src_info {type:XDC file:1 line:20 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN T8 IOSTANDARD LVCMOS33 } [get_ports { switches[7] }];
-set_property src_info {type:XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN R13 IOSTANDARD LVCMOS33 } [get_ports { switches[8] }];
-set_property src_info {type:XDC file:1 line:22 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN U18 IOSTANDARD LVCMOS33 } [get_ports { switches[9] }];
-set_property src_info {type:XDC file:1 line:23 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN T18 IOSTANDARD LVCMOS33 } [get_ports { switches[10] }];
-set_property src_info {type:XDC file:1 line:24 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN R17 IOSTANDARD LVCMOS33 } [get_ports { switches[11] }];
-set_property src_info {type:XDC file:1 line:25 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN R15 IOSTANDARD LVCMOS33 } [get_ports { switches[12] }];
