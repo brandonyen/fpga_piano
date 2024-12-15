@@ -3,11 +3,11 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Tue Dec 10 13:05:38 2024
-# Process ID: 8516
+# Start of session at: Sun Dec 15 14:27:28 2024
+# Process ID: 8908
 # Current directory: C:/Users/Brandon/fpga_piano/fpga_piano.runs/synth_1
-# Command line: vivado.exe -log siren.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source siren.tcl
-# Log file: C:/Users/Brandon/fpga_piano/fpga_piano.runs/synth_1/siren.vds
+# Command line: vivado.exe -log piano.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source piano.tcl
+# Log file: C:/Users/Brandon/fpga_piano/fpga_piano.runs/synth_1/piano.vds
 # Journal file: C:/Users/Brandon/fpga_piano/fpga_piano.runs/synth_1\vivado.jou
 # Running On        :DESKTOP-7070VCE
 # Platform          :Windows Server 2016 or Windows 10
@@ -17,8 +17,8 @@
 # CPU Physical cores:8
 # CPU Logical cores :16
 # Host memory       :16354 MB
-# Swap memory       :9126 MB
-# Total Virtual     :25480 MB
-# Available Virtual :13396 MB
+# Swap memory       :10200 MB
+# Total Virtual     :26554 MB
+# Available Virtual :12634 MB
 #-----------------------------------------------------------
-source siren.tcl -notrace
+source piano.tcl -notrace

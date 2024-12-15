@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log siren.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source siren.tcl
+EAStep vivado -log piano.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source piano.tcl
