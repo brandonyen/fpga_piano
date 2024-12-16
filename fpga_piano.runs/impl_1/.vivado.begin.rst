@@ -1,40 +1,10 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="23508" HostCore="16" HostMemory="016354058240">
+    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="1904" HostCore="16" HostMemory="016354058240">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="11368" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="23432" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="5704" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="15704" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="11980" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="10884" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="11744" HostCore="16" HostMemory="016354058240">
+    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="6404" HostCore="16" HostMemory="016354058240">
     </Process>
 </ProcessHandle>

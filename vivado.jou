@@ -3,12 +3,12 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Sun Dec 15 21:34:00 2024
-# Process ID: 9108
-# Current directory: C:/Users/Brandon/fpga_piano/fpga_piano.runs/impl_1
-# Command line: vivado.exe -log piano.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source piano.tcl -notrace
-# Log file: C:/Users/Brandon/fpga_piano/fpga_piano.runs/impl_1/piano.vdi
-# Journal file: C:/Users/Brandon/fpga_piano/fpga_piano.runs/impl_1\vivado.jou
+# Start of session at: Mon Dec 16 17:21:36 2024
+# Process ID: 21672
+# Current directory: C:/Users/Brandon/fpga_piano
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21676 C:\Users\Brandon\fpga_piano\fpga_piano.xpr
+# Log file: C:/Users/Brandon/fpga_piano/vivado.log
+# Journal file: C:/Users/Brandon/fpga_piano\vivado.jou
 # Running On        :DESKTOP-7070VCE
 # Platform          :Windows Server 2016 or Windows 10
 # Operating System  :22631
@@ -19,6 +19,7 @@
 # Host memory       :16354 MB
 # Swap memory       :10200 MB
 # Total Virtual     :26554 MB
-# Available Virtual :8679 MB
+# Available Virtual :12166 MB
 #-----------------------------------------------------------
-source piano.tcl -notrace
+start_gui
+open_project C:/Users/Brandon/fpga_piano/fpga_piano.xpr

@@ -4,7 +4,9 @@ module piano (
     output logic dac_MCLK,           // outputs to PMODI2L DAC
     output logic dac_LRCK,           // left-right clock
     output logic dac_SCLK,           // serial clock
-    output logic dac_SDIN            // serial data input to DAC
+    output logic dac_SDIN,            // serial data input to DAC
+    output logic [7:0] anode,
+    output logic [6:0] seg
 );
 
     localparam logic [13:0] pitches [0:7] = {
@@ -71,15 +73,25 @@ module piano (
     logic signed [15:0] note_audio [7:0];
     logic signed [15:0] mixed_audio;
     logic signed [15:0] scaled_audio;
+    logic [3:0] count;
 
     always_comb begin
         mixed_audio = 16'd0; 
+        count = 4'd0;
         for (int j = 0; j < 8; j++) begin
             mixed_audio += note_audio[j];
+            if (note_audio[j] != 0) count += 1;
         end
         
         scaled_audio = mixed_audio >>> 1;  // Scale down the audio
     end
+    
+    leddec leddec_inst (
+        .dig(3'b000),
+        .data(count),
+        .anode,
+        .seg
+    );
 
     assign data_L = scaled_audio; 
 
