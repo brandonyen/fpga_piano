@@ -2,6 +2,7 @@
 Allows the FPGA to generate audio signals corresponding to musical notes when switches are pressed, which are output through the DAC as analog audio
  - dac_if module
    - Takes 16-bit parallel stereo data and converts it to the serial format required by the digital to analog converter
+   - Same as Lab 5's dac_if
  - note_proc module
     - Generates a waveform corresponding to a specific pitch
     - The count variable accumulates the pitch value at every clock cycle, determining the waveform frequency
