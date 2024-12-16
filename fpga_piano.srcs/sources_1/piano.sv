@@ -79,9 +79,6 @@ module piano (
         end
         
         scaled_audio = mixed_audio >>> 1;  // Scale down the audio
-        
-        if (scaled_audio > 16383) scaled_audio = 16383;
-        if (scaled_audio < -16383) scaled_audio = -16383;
     end
 
     assign data_L = scaled_audio; 

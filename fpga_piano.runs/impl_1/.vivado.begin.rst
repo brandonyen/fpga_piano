@@ -1,86 +1,21 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="8416" HostCore="16" HostMemory="016354058240">
+    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="23508" HostCore="16" HostMemory="016354058240">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="1808" HostCore="16" HostMemory="016354058240">
+    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="11368" HostCore="16" HostMemory="016354058240">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="8240" HostCore="16" HostMemory="016354058240">
+    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="23432" HostCore="16" HostMemory="016354058240">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="15828" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="9348" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="7652" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="4504" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="12428" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="9824" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="14144" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="11352" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="5332" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="21304" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="16724" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="18220" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="14308" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="9356" HostCore="16" HostMemory="016354058240">
+    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="5704" HostCore="16" HostMemory="016354058240">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
@@ -90,156 +25,16 @@
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="19864" HostCore="16" HostMemory="016354058240">
+    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="11980" HostCore="16" HostMemory="016354058240">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="15404" HostCore="16" HostMemory="016354058240">
+    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="10884" HostCore="16" HostMemory="016354058240">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="9912" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="1976" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="14436" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="11268" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="3640" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="15160" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="11800" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="3004" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="12000" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="11400" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="4072" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="13688" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="16324" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="20192" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="18948" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="20996" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="3264" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="348" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="10996" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="5584" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="20656" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="13860" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="14620" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="15092" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="13004" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="18948" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="14792" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="11032" HostCore="16" HostMemory="016354058240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="19752" HostCore="16" HostMemory="016354058240">
+    <Process Command="vivado.bat" Owner="Brandon" Host="DESKTOP-7070VCE" Pid="11744" HostCore="16" HostMemory="016354058240">
     </Process>
 </ProcessHandle>

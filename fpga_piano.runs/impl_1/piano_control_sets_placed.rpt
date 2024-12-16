@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Sun Dec 15 17:52:48 2024
+| Date         : Sun Dec 15 21:51:21 2024
 | Host         : DESKTOP-7070VCE running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file piano_control_sets_placed.rpt
 | Design       : piano
@@ -58,7 +58,7 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             156 |           42 |
+| No           | No                    | No                     |             156 |           43 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
@@ -74,7 +74,7 @@ Table of Contents
 |     Clock Signal     | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------------+---------------+------------------+------------------+----------------+--------------+
 |  clk_50MHz_IBUF_BUFG |               |                  |                4 |             12 |         3.00 |
-| ~dac_SCLK_OBUF       |               |                  |                6 |             16 |         2.67 |
+| ~dac_SCLK_OBUF       |               |                  |                7 |             16 |         2.29 |
 |  dac_LRCK_OBUF_BUFG  |               |                  |               32 |            128 |         4.00 |
 +----------------------+---------------+------------------+------------------+----------------+--------------+
 

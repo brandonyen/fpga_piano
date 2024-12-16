@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Sun Dec 15 17:53:22 2024
+| Date         : Sun Dec 15 21:51:55 2024
 | Host         : DESKTOP-7070VCE running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -report_unconstrained -file piano_timing_summary_routed.rpt -pb piano_timing_summary_routed.pb -rpx piano_timing_summary_routed.rpx -warn_on_violation
 | Design       : piano
@@ -223,463 +223,434 @@ Min Delay           160 Endpoints
 Max Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 switches[3]
-                            (input port)
-  Destination:            dac_inst/sreg_reg[9]/D
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        17.579ns  (logic 5.001ns (28.447%)  route 12.578ns (71.553%))
-  Logic Levels:           13  (CARRY4=4 IBUF=1 LUT2=1 LUT3=2 LUT4=1 LUT5=2 LUT6=2)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    H6                                                0.000     0.000 r  switches[3] (IN)
-                         net (fo=0)                   0.000     0.000    switches[3]
-    H6                   IBUF (Prop_ibuf_I_O)         1.467     1.467 r  switches_IBUF[3]_inst/O
-                         net (fo=27, routed)          5.106     6.573    genblk1[3].note_proc_inst/switches_IBUF[0]
-    SLICE_X14Y67         LUT6 (Prop_lut6_I0_O)        0.124     6.697 r  genblk1[3].note_proc_inst/sreg[10]_i_63/O
-                         net (fo=2, routed)           1.318     8.015    genblk1[5].note_proc_inst/note_audio[3][3]
-    SLICE_X6Y64          LUT3 (Prop_lut3_I1_O)        0.156     8.171 r  genblk1[5].note_proc_inst/sreg[10]_i_36/O
-                         net (fo=2, routed)           0.607     8.777    genblk1[5].note_proc_inst/sreg[10]_i_36_n_0
-    SLICE_X6Y65          LUT4 (Prop_lut4_I3_O)        0.355     9.132 r  genblk1[5].note_proc_inst/sreg[10]_i_40/O
-                         net (fo=1, routed)           0.000     9.132    genblk1[5].note_proc_inst/sreg[10]_i_40_n_0
-    SLICE_X6Y65          CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.513     9.645 r  genblk1[5].note_proc_inst/sreg_reg[10]_i_18/CO[3]
-                         net (fo=1, routed)           0.000     9.645    genblk1[5].note_proc_inst/sreg_reg[10]_i_18_n_0
-    SLICE_X6Y66          CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.219     9.864 r  genblk1[5].note_proc_inst/sreg_reg[15]_i_26/O[0]
-                         net (fo=3, routed)           1.378    11.242    genblk1[1].note_proc_inst/sreg[10]_i_7_1[0]
-    SLICE_X7Y62          LUT3 (Prop_lut3_I1_O)        0.295    11.537 r  genblk1[1].note_proc_inst/sreg[10]_i_21/O
-                         net (fo=2, routed)           0.533    12.070    genblk1[1].note_proc_inst/sreg[10]_i_21_n_0
-    SLICE_X7Y61          LUT5 (Prop_lut5_I4_O)        0.124    12.194 r  genblk1[1].note_proc_inst/sreg[10]_i_5/O
-                         net (fo=2, routed)           1.105    13.299    genblk1[1].note_proc_inst/sreg[10]_i_5_n_0
-    SLICE_X6Y62          LUT6 (Prop_lut6_I0_O)        0.124    13.423 r  genblk1[1].note_proc_inst/sreg[10]_i_9/O
-                         net (fo=1, routed)           0.000    13.423    genblk1[1].note_proc_inst/sreg[10]_i_9_n_0
-    SLICE_X6Y62          CARRY4 (Prop_carry4_S[1]_O[3])
-                                                      0.643    14.066 f  genblk1[1].note_proc_inst/sreg_reg[10]_i_2/O[3]
-                         net (fo=2, routed)           0.948    15.013    genblk1[1].note_proc_inst/sreg_reg[10]_i_2_n_4
-    SLICE_X4Y64          LUT2 (Prop_lut2_I1_O)        0.307    15.320 r  genblk1[1].note_proc_inst/sreg[15]_i_6/O
-                         net (fo=1, routed)           0.000    15.320    genblk1[1].note_proc_inst/sreg[15]_i_6_n_0
-    SLICE_X4Y64          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    15.870 f  genblk1[1].note_proc_inst/sreg_reg[15]_i_2/CO[3]
-                         net (fo=16, routed)          1.585    17.455    genblk1[1].note_proc_inst/CO[0]
-    SLICE_X3Y63          LUT5 (Prop_lut5_I1_O)        0.124    17.579 r  genblk1[1].note_proc_inst/sreg[9]_i_1/O
-                         net (fo=1, routed)           0.000    17.579    dac_inst/D[9]
-    SLICE_X3Y63          FDRE                                         r  dac_inst/sreg_reg[9]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 switches[3]
-                            (input port)
-  Destination:            dac_inst/sreg_reg[4]/D
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        17.518ns  (logic 5.001ns (28.545%)  route 12.518ns (71.455%))
-  Logic Levels:           13  (CARRY4=4 IBUF=1 LUT2=1 LUT3=2 LUT4=1 LUT5=2 LUT6=2)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    H6                                                0.000     0.000 r  switches[3] (IN)
-                         net (fo=0)                   0.000     0.000    switches[3]
-    H6                   IBUF (Prop_ibuf_I_O)         1.467     1.467 r  switches_IBUF[3]_inst/O
-                         net (fo=27, routed)          5.106     6.573    genblk1[3].note_proc_inst/switches_IBUF[0]
-    SLICE_X14Y67         LUT6 (Prop_lut6_I0_O)        0.124     6.697 r  genblk1[3].note_proc_inst/sreg[10]_i_63/O
-                         net (fo=2, routed)           1.318     8.015    genblk1[5].note_proc_inst/note_audio[3][3]
-    SLICE_X6Y64          LUT3 (Prop_lut3_I1_O)        0.156     8.171 r  genblk1[5].note_proc_inst/sreg[10]_i_36/O
-                         net (fo=2, routed)           0.607     8.777    genblk1[5].note_proc_inst/sreg[10]_i_36_n_0
-    SLICE_X6Y65          LUT4 (Prop_lut4_I3_O)        0.355     9.132 r  genblk1[5].note_proc_inst/sreg[10]_i_40/O
-                         net (fo=1, routed)           0.000     9.132    genblk1[5].note_proc_inst/sreg[10]_i_40_n_0
-    SLICE_X6Y65          CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.513     9.645 r  genblk1[5].note_proc_inst/sreg_reg[10]_i_18/CO[3]
-                         net (fo=1, routed)           0.000     9.645    genblk1[5].note_proc_inst/sreg_reg[10]_i_18_n_0
-    SLICE_X6Y66          CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.219     9.864 r  genblk1[5].note_proc_inst/sreg_reg[15]_i_26/O[0]
-                         net (fo=3, routed)           1.378    11.242    genblk1[1].note_proc_inst/sreg[10]_i_7_1[0]
-    SLICE_X7Y62          LUT3 (Prop_lut3_I1_O)        0.295    11.537 r  genblk1[1].note_proc_inst/sreg[10]_i_21/O
-                         net (fo=2, routed)           0.533    12.070    genblk1[1].note_proc_inst/sreg[10]_i_21_n_0
-    SLICE_X7Y61          LUT5 (Prop_lut5_I4_O)        0.124    12.194 r  genblk1[1].note_proc_inst/sreg[10]_i_5/O
-                         net (fo=2, routed)           1.105    13.299    genblk1[1].note_proc_inst/sreg[10]_i_5_n_0
-    SLICE_X6Y62          LUT6 (Prop_lut6_I0_O)        0.124    13.423 r  genblk1[1].note_proc_inst/sreg[10]_i_9/O
-                         net (fo=1, routed)           0.000    13.423    genblk1[1].note_proc_inst/sreg[10]_i_9_n_0
-    SLICE_X6Y62          CARRY4 (Prop_carry4_S[1]_O[3])
-                                                      0.643    14.066 f  genblk1[1].note_proc_inst/sreg_reg[10]_i_2/O[3]
-                         net (fo=2, routed)           0.948    15.013    genblk1[1].note_proc_inst/sreg_reg[10]_i_2_n_4
-    SLICE_X4Y64          LUT2 (Prop_lut2_I1_O)        0.307    15.320 r  genblk1[1].note_proc_inst/sreg[15]_i_6/O
-                         net (fo=1, routed)           0.000    15.320    genblk1[1].note_proc_inst/sreg[15]_i_6_n_0
-    SLICE_X4Y64          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    15.870 f  genblk1[1].note_proc_inst/sreg_reg[15]_i_2/CO[3]
-                         net (fo=16, routed)          1.524    17.394    genblk1[1].note_proc_inst/CO[0]
-    SLICE_X0Y63          LUT5 (Prop_lut5_I1_O)        0.124    17.518 r  genblk1[1].note_proc_inst/sreg[4]_i_1/O
-                         net (fo=1, routed)           0.000    17.518    dac_inst/D[4]
-    SLICE_X0Y63          FDRE                                         r  dac_inst/sreg_reg[4]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 switches[3]
-                            (input port)
-  Destination:            dac_inst/sreg_reg[6]/D
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        17.374ns  (logic 5.001ns (28.781%)  route 12.374ns (71.219%))
-  Logic Levels:           13  (CARRY4=4 IBUF=1 LUT2=1 LUT3=2 LUT4=1 LUT5=2 LUT6=2)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    H6                                                0.000     0.000 r  switches[3] (IN)
-                         net (fo=0)                   0.000     0.000    switches[3]
-    H6                   IBUF (Prop_ibuf_I_O)         1.467     1.467 r  switches_IBUF[3]_inst/O
-                         net (fo=27, routed)          5.106     6.573    genblk1[3].note_proc_inst/switches_IBUF[0]
-    SLICE_X14Y67         LUT6 (Prop_lut6_I0_O)        0.124     6.697 r  genblk1[3].note_proc_inst/sreg[10]_i_63/O
-                         net (fo=2, routed)           1.318     8.015    genblk1[5].note_proc_inst/note_audio[3][3]
-    SLICE_X6Y64          LUT3 (Prop_lut3_I1_O)        0.156     8.171 r  genblk1[5].note_proc_inst/sreg[10]_i_36/O
-                         net (fo=2, routed)           0.607     8.777    genblk1[5].note_proc_inst/sreg[10]_i_36_n_0
-    SLICE_X6Y65          LUT4 (Prop_lut4_I3_O)        0.355     9.132 r  genblk1[5].note_proc_inst/sreg[10]_i_40/O
-                         net (fo=1, routed)           0.000     9.132    genblk1[5].note_proc_inst/sreg[10]_i_40_n_0
-    SLICE_X6Y65          CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.513     9.645 r  genblk1[5].note_proc_inst/sreg_reg[10]_i_18/CO[3]
-                         net (fo=1, routed)           0.000     9.645    genblk1[5].note_proc_inst/sreg_reg[10]_i_18_n_0
-    SLICE_X6Y66          CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.219     9.864 r  genblk1[5].note_proc_inst/sreg_reg[15]_i_26/O[0]
-                         net (fo=3, routed)           1.378    11.242    genblk1[1].note_proc_inst/sreg[10]_i_7_1[0]
-    SLICE_X7Y62          LUT3 (Prop_lut3_I1_O)        0.295    11.537 r  genblk1[1].note_proc_inst/sreg[10]_i_21/O
-                         net (fo=2, routed)           0.533    12.070    genblk1[1].note_proc_inst/sreg[10]_i_21_n_0
-    SLICE_X7Y61          LUT5 (Prop_lut5_I4_O)        0.124    12.194 r  genblk1[1].note_proc_inst/sreg[10]_i_5/O
-                         net (fo=2, routed)           1.105    13.299    genblk1[1].note_proc_inst/sreg[10]_i_5_n_0
-    SLICE_X6Y62          LUT6 (Prop_lut6_I0_O)        0.124    13.423 r  genblk1[1].note_proc_inst/sreg[10]_i_9/O
-                         net (fo=1, routed)           0.000    13.423    genblk1[1].note_proc_inst/sreg[10]_i_9_n_0
-    SLICE_X6Y62          CARRY4 (Prop_carry4_S[1]_O[3])
-                                                      0.643    14.066 f  genblk1[1].note_proc_inst/sreg_reg[10]_i_2/O[3]
-                         net (fo=2, routed)           0.948    15.013    genblk1[1].note_proc_inst/sreg_reg[10]_i_2_n_4
-    SLICE_X4Y64          LUT2 (Prop_lut2_I1_O)        0.307    15.320 r  genblk1[1].note_proc_inst/sreg[15]_i_6/O
-                         net (fo=1, routed)           0.000    15.320    genblk1[1].note_proc_inst/sreg[15]_i_6_n_0
-    SLICE_X4Y64          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    15.870 f  genblk1[1].note_proc_inst/sreg_reg[15]_i_2/CO[3]
-                         net (fo=16, routed)          1.380    17.250    genblk1[1].note_proc_inst/CO[0]
-    SLICE_X3Y63          LUT5 (Prop_lut5_I1_O)        0.124    17.374 r  genblk1[1].note_proc_inst/sreg[6]_i_1/O
-                         net (fo=1, routed)           0.000    17.374    dac_inst/D[6]
-    SLICE_X3Y63          FDRE                                         r  dac_inst/sreg_reg[6]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 switches[3]
-                            (input port)
-  Destination:            dac_inst/sreg_reg[8]/D
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        17.374ns  (logic 5.001ns (28.781%)  route 12.374ns (71.219%))
-  Logic Levels:           13  (CARRY4=4 IBUF=1 LUT2=1 LUT3=2 LUT4=1 LUT5=2 LUT6=2)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    H6                                                0.000     0.000 r  switches[3] (IN)
-                         net (fo=0)                   0.000     0.000    switches[3]
-    H6                   IBUF (Prop_ibuf_I_O)         1.467     1.467 r  switches_IBUF[3]_inst/O
-                         net (fo=27, routed)          5.106     6.573    genblk1[3].note_proc_inst/switches_IBUF[0]
-    SLICE_X14Y67         LUT6 (Prop_lut6_I0_O)        0.124     6.697 r  genblk1[3].note_proc_inst/sreg[10]_i_63/O
-                         net (fo=2, routed)           1.318     8.015    genblk1[5].note_proc_inst/note_audio[3][3]
-    SLICE_X6Y64          LUT3 (Prop_lut3_I1_O)        0.156     8.171 r  genblk1[5].note_proc_inst/sreg[10]_i_36/O
-                         net (fo=2, routed)           0.607     8.777    genblk1[5].note_proc_inst/sreg[10]_i_36_n_0
-    SLICE_X6Y65          LUT4 (Prop_lut4_I3_O)        0.355     9.132 r  genblk1[5].note_proc_inst/sreg[10]_i_40/O
-                         net (fo=1, routed)           0.000     9.132    genblk1[5].note_proc_inst/sreg[10]_i_40_n_0
-    SLICE_X6Y65          CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.513     9.645 r  genblk1[5].note_proc_inst/sreg_reg[10]_i_18/CO[3]
-                         net (fo=1, routed)           0.000     9.645    genblk1[5].note_proc_inst/sreg_reg[10]_i_18_n_0
-    SLICE_X6Y66          CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.219     9.864 r  genblk1[5].note_proc_inst/sreg_reg[15]_i_26/O[0]
-                         net (fo=3, routed)           1.378    11.242    genblk1[1].note_proc_inst/sreg[10]_i_7_1[0]
-    SLICE_X7Y62          LUT3 (Prop_lut3_I1_O)        0.295    11.537 r  genblk1[1].note_proc_inst/sreg[10]_i_21/O
-                         net (fo=2, routed)           0.533    12.070    genblk1[1].note_proc_inst/sreg[10]_i_21_n_0
-    SLICE_X7Y61          LUT5 (Prop_lut5_I4_O)        0.124    12.194 r  genblk1[1].note_proc_inst/sreg[10]_i_5/O
-                         net (fo=2, routed)           1.105    13.299    genblk1[1].note_proc_inst/sreg[10]_i_5_n_0
-    SLICE_X6Y62          LUT6 (Prop_lut6_I0_O)        0.124    13.423 r  genblk1[1].note_proc_inst/sreg[10]_i_9/O
-                         net (fo=1, routed)           0.000    13.423    genblk1[1].note_proc_inst/sreg[10]_i_9_n_0
-    SLICE_X6Y62          CARRY4 (Prop_carry4_S[1]_O[3])
-                                                      0.643    14.066 f  genblk1[1].note_proc_inst/sreg_reg[10]_i_2/O[3]
-                         net (fo=2, routed)           0.948    15.013    genblk1[1].note_proc_inst/sreg_reg[10]_i_2_n_4
-    SLICE_X4Y64          LUT2 (Prop_lut2_I1_O)        0.307    15.320 r  genblk1[1].note_proc_inst/sreg[15]_i_6/O
-                         net (fo=1, routed)           0.000    15.320    genblk1[1].note_proc_inst/sreg[15]_i_6_n_0
-    SLICE_X4Y64          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    15.870 f  genblk1[1].note_proc_inst/sreg_reg[15]_i_2/CO[3]
-                         net (fo=16, routed)          1.380    17.250    genblk1[1].note_proc_inst/CO[0]
-    SLICE_X3Y63          LUT5 (Prop_lut5_I1_O)        0.124    17.374 r  genblk1[1].note_proc_inst/sreg[8]_i_1/O
-                         net (fo=1, routed)           0.000    17.374    dac_inst/D[8]
-    SLICE_X3Y63          FDRE                                         r  dac_inst/sreg_reg[8]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 switches[3]
-                            (input port)
-  Destination:            dac_inst/sreg_reg[7]/D
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        17.373ns  (logic 5.001ns (28.783%)  route 12.373ns (71.217%))
-  Logic Levels:           13  (CARRY4=4 IBUF=1 LUT2=1 LUT3=2 LUT4=1 LUT5=2 LUT6=2)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    H6                                                0.000     0.000 r  switches[3] (IN)
-                         net (fo=0)                   0.000     0.000    switches[3]
-    H6                   IBUF (Prop_ibuf_I_O)         1.467     1.467 r  switches_IBUF[3]_inst/O
-                         net (fo=27, routed)          5.106     6.573    genblk1[3].note_proc_inst/switches_IBUF[0]
-    SLICE_X14Y67         LUT6 (Prop_lut6_I0_O)        0.124     6.697 r  genblk1[3].note_proc_inst/sreg[10]_i_63/O
-                         net (fo=2, routed)           1.318     8.015    genblk1[5].note_proc_inst/note_audio[3][3]
-    SLICE_X6Y64          LUT3 (Prop_lut3_I1_O)        0.156     8.171 r  genblk1[5].note_proc_inst/sreg[10]_i_36/O
-                         net (fo=2, routed)           0.607     8.777    genblk1[5].note_proc_inst/sreg[10]_i_36_n_0
-    SLICE_X6Y65          LUT4 (Prop_lut4_I3_O)        0.355     9.132 r  genblk1[5].note_proc_inst/sreg[10]_i_40/O
-                         net (fo=1, routed)           0.000     9.132    genblk1[5].note_proc_inst/sreg[10]_i_40_n_0
-    SLICE_X6Y65          CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.513     9.645 r  genblk1[5].note_proc_inst/sreg_reg[10]_i_18/CO[3]
-                         net (fo=1, routed)           0.000     9.645    genblk1[5].note_proc_inst/sreg_reg[10]_i_18_n_0
-    SLICE_X6Y66          CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.219     9.864 r  genblk1[5].note_proc_inst/sreg_reg[15]_i_26/O[0]
-                         net (fo=3, routed)           1.378    11.242    genblk1[1].note_proc_inst/sreg[10]_i_7_1[0]
-    SLICE_X7Y62          LUT3 (Prop_lut3_I1_O)        0.295    11.537 r  genblk1[1].note_proc_inst/sreg[10]_i_21/O
-                         net (fo=2, routed)           0.533    12.070    genblk1[1].note_proc_inst/sreg[10]_i_21_n_0
-    SLICE_X7Y61          LUT5 (Prop_lut5_I4_O)        0.124    12.194 r  genblk1[1].note_proc_inst/sreg[10]_i_5/O
-                         net (fo=2, routed)           1.105    13.299    genblk1[1].note_proc_inst/sreg[10]_i_5_n_0
-    SLICE_X6Y62          LUT6 (Prop_lut6_I0_O)        0.124    13.423 r  genblk1[1].note_proc_inst/sreg[10]_i_9/O
-                         net (fo=1, routed)           0.000    13.423    genblk1[1].note_proc_inst/sreg[10]_i_9_n_0
-    SLICE_X6Y62          CARRY4 (Prop_carry4_S[1]_O[3])
-                                                      0.643    14.066 f  genblk1[1].note_proc_inst/sreg_reg[10]_i_2/O[3]
-                         net (fo=2, routed)           0.948    15.013    genblk1[1].note_proc_inst/sreg_reg[10]_i_2_n_4
-    SLICE_X4Y64          LUT2 (Prop_lut2_I1_O)        0.307    15.320 r  genblk1[1].note_proc_inst/sreg[15]_i_6/O
-                         net (fo=1, routed)           0.000    15.320    genblk1[1].note_proc_inst/sreg[15]_i_6_n_0
-    SLICE_X4Y64          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    15.870 f  genblk1[1].note_proc_inst/sreg_reg[15]_i_2/CO[3]
-                         net (fo=16, routed)          1.379    17.249    genblk1[1].note_proc_inst/CO[0]
-    SLICE_X3Y63          LUT5 (Prop_lut5_I1_O)        0.124    17.373 r  genblk1[1].note_proc_inst/sreg[7]_i_1/O
-                         net (fo=1, routed)           0.000    17.373    dac_inst/D[7]
-    SLICE_X3Y63          FDRE                                         r  dac_inst/sreg_reg[7]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 switches[3]
-                            (input port)
-  Destination:            dac_inst/sreg_reg[3]/D
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        17.365ns  (logic 5.001ns (28.796%)  route 12.365ns (71.204%))
-  Logic Levels:           13  (CARRY4=4 IBUF=1 LUT2=1 LUT3=2 LUT4=1 LUT5=2 LUT6=2)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    H6                                                0.000     0.000 r  switches[3] (IN)
-                         net (fo=0)                   0.000     0.000    switches[3]
-    H6                   IBUF (Prop_ibuf_I_O)         1.467     1.467 r  switches_IBUF[3]_inst/O
-                         net (fo=27, routed)          5.106     6.573    genblk1[3].note_proc_inst/switches_IBUF[0]
-    SLICE_X14Y67         LUT6 (Prop_lut6_I0_O)        0.124     6.697 r  genblk1[3].note_proc_inst/sreg[10]_i_63/O
-                         net (fo=2, routed)           1.318     8.015    genblk1[5].note_proc_inst/note_audio[3][3]
-    SLICE_X6Y64          LUT3 (Prop_lut3_I1_O)        0.156     8.171 r  genblk1[5].note_proc_inst/sreg[10]_i_36/O
-                         net (fo=2, routed)           0.607     8.777    genblk1[5].note_proc_inst/sreg[10]_i_36_n_0
-    SLICE_X6Y65          LUT4 (Prop_lut4_I3_O)        0.355     9.132 r  genblk1[5].note_proc_inst/sreg[10]_i_40/O
-                         net (fo=1, routed)           0.000     9.132    genblk1[5].note_proc_inst/sreg[10]_i_40_n_0
-    SLICE_X6Y65          CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.513     9.645 r  genblk1[5].note_proc_inst/sreg_reg[10]_i_18/CO[3]
-                         net (fo=1, routed)           0.000     9.645    genblk1[5].note_proc_inst/sreg_reg[10]_i_18_n_0
-    SLICE_X6Y66          CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.219     9.864 r  genblk1[5].note_proc_inst/sreg_reg[15]_i_26/O[0]
-                         net (fo=3, routed)           1.378    11.242    genblk1[1].note_proc_inst/sreg[10]_i_7_1[0]
-    SLICE_X7Y62          LUT3 (Prop_lut3_I1_O)        0.295    11.537 r  genblk1[1].note_proc_inst/sreg[10]_i_21/O
-                         net (fo=2, routed)           0.533    12.070    genblk1[1].note_proc_inst/sreg[10]_i_21_n_0
-    SLICE_X7Y61          LUT5 (Prop_lut5_I4_O)        0.124    12.194 r  genblk1[1].note_proc_inst/sreg[10]_i_5/O
-                         net (fo=2, routed)           1.105    13.299    genblk1[1].note_proc_inst/sreg[10]_i_5_n_0
-    SLICE_X6Y62          LUT6 (Prop_lut6_I0_O)        0.124    13.423 r  genblk1[1].note_proc_inst/sreg[10]_i_9/O
-                         net (fo=1, routed)           0.000    13.423    genblk1[1].note_proc_inst/sreg[10]_i_9_n_0
-    SLICE_X6Y62          CARRY4 (Prop_carry4_S[1]_O[3])
-                                                      0.643    14.066 f  genblk1[1].note_proc_inst/sreg_reg[10]_i_2/O[3]
-                         net (fo=2, routed)           0.948    15.013    genblk1[1].note_proc_inst/sreg_reg[10]_i_2_n_4
-    SLICE_X4Y64          LUT2 (Prop_lut2_I1_O)        0.307    15.320 r  genblk1[1].note_proc_inst/sreg[15]_i_6/O
-                         net (fo=1, routed)           0.000    15.320    genblk1[1].note_proc_inst/sreg[15]_i_6_n_0
-    SLICE_X4Y64          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    15.870 f  genblk1[1].note_proc_inst/sreg_reg[15]_i_2/CO[3]
-                         net (fo=16, routed)          1.371    17.241    genblk1[1].note_proc_inst/CO[0]
-    SLICE_X0Y63          LUT5 (Prop_lut5_I1_O)        0.124    17.365 r  genblk1[1].note_proc_inst/sreg[3]_i_1/O
-                         net (fo=1, routed)           0.000    17.365    dac_inst/D[3]
-    SLICE_X0Y63          FDRE                                         r  dac_inst/sreg_reg[3]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 switches[3]
+  Source:                 switches[7]
                             (input port)
   Destination:            dac_inst/sreg_reg[13]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        17.184ns  (logic 5.001ns (29.099%)  route 12.184ns (70.901%))
-  Logic Levels:           13  (CARRY4=4 IBUF=1 LUT2=1 LUT3=2 LUT4=1 LUT5=2 LUT6=2)
+  Data Path Delay:        14.933ns  (logic 4.298ns (28.782%)  route 10.635ns (71.218%))
+  Logic Levels:           12  (CARRY4=4 IBUF=1 LUT3=2 LUT4=2 LUT5=1 LUT6=2)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    H6                                                0.000     0.000 r  switches[3] (IN)
-                         net (fo=0)                   0.000     0.000    switches[3]
-    H6                   IBUF (Prop_ibuf_I_O)         1.467     1.467 r  switches_IBUF[3]_inst/O
-                         net (fo=27, routed)          5.106     6.573    genblk1[3].note_proc_inst/switches_IBUF[0]
-    SLICE_X14Y67         LUT6 (Prop_lut6_I0_O)        0.124     6.697 r  genblk1[3].note_proc_inst/sreg[10]_i_63/O
-                         net (fo=2, routed)           1.318     8.015    genblk1[5].note_proc_inst/note_audio[3][3]
-    SLICE_X6Y64          LUT3 (Prop_lut3_I1_O)        0.156     8.171 r  genblk1[5].note_proc_inst/sreg[10]_i_36/O
-                         net (fo=2, routed)           0.607     8.777    genblk1[5].note_proc_inst/sreg[10]_i_36_n_0
-    SLICE_X6Y65          LUT4 (Prop_lut4_I3_O)        0.355     9.132 r  genblk1[5].note_proc_inst/sreg[10]_i_40/O
-                         net (fo=1, routed)           0.000     9.132    genblk1[5].note_proc_inst/sreg[10]_i_40_n_0
-    SLICE_X6Y65          CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.513     9.645 r  genblk1[5].note_proc_inst/sreg_reg[10]_i_18/CO[3]
-                         net (fo=1, routed)           0.000     9.645    genblk1[5].note_proc_inst/sreg_reg[10]_i_18_n_0
-    SLICE_X6Y66          CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.219     9.864 r  genblk1[5].note_proc_inst/sreg_reg[15]_i_26/O[0]
-                         net (fo=3, routed)           1.378    11.242    genblk1[1].note_proc_inst/sreg[10]_i_7_1[0]
-    SLICE_X7Y62          LUT3 (Prop_lut3_I1_O)        0.295    11.537 r  genblk1[1].note_proc_inst/sreg[10]_i_21/O
-                         net (fo=2, routed)           0.533    12.070    genblk1[1].note_proc_inst/sreg[10]_i_21_n_0
-    SLICE_X7Y61          LUT5 (Prop_lut5_I4_O)        0.124    12.194 r  genblk1[1].note_proc_inst/sreg[10]_i_5/O
-                         net (fo=2, routed)           1.105    13.299    genblk1[1].note_proc_inst/sreg[10]_i_5_n_0
-    SLICE_X6Y62          LUT6 (Prop_lut6_I0_O)        0.124    13.423 r  genblk1[1].note_proc_inst/sreg[10]_i_9/O
-                         net (fo=1, routed)           0.000    13.423    genblk1[1].note_proc_inst/sreg[10]_i_9_n_0
-    SLICE_X6Y62          CARRY4 (Prop_carry4_S[1]_O[3])
-                                                      0.643    14.066 f  genblk1[1].note_proc_inst/sreg_reg[10]_i_2/O[3]
-                         net (fo=2, routed)           0.948    15.013    genblk1[1].note_proc_inst/sreg_reg[10]_i_2_n_4
-    SLICE_X4Y64          LUT2 (Prop_lut2_I1_O)        0.307    15.320 r  genblk1[1].note_proc_inst/sreg[15]_i_6/O
-                         net (fo=1, routed)           0.000    15.320    genblk1[1].note_proc_inst/sreg[15]_i_6_n_0
-    SLICE_X4Y64          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    15.870 f  genblk1[1].note_proc_inst/sreg_reg[15]_i_2/CO[3]
-                         net (fo=16, routed)          1.190    17.060    genblk1[1].note_proc_inst/CO[0]
-    SLICE_X3Y64          LUT5 (Prop_lut5_I1_O)        0.124    17.184 r  genblk1[1].note_proc_inst/sreg[13]_i_1/O
-                         net (fo=1, routed)           0.000    17.184    dac_inst/D[13]
-    SLICE_X3Y64          FDRE                                         r  dac_inst/sreg_reg[13]/D
+    T8                                                0.000     0.000 r  switches[7] (IN)
+                         net (fo=0)                   0.000     0.000    switches[7]
+    T8                   IBUF (Prop_ibuf_I_O)         1.497     1.497 r  switches_IBUF[7]_inst/O
+                         net (fo=29, routed)          4.726     6.223    genblk1[7].note_proc_inst/switches_IBUF[0]
+    SLICE_X6Y49          LUT6 (Prop_lut6_I0_O)        0.124     6.347 r  genblk1[7].note_proc_inst/sreg[10]_i_46/O
+                         net (fo=2, routed)           1.171     7.518    genblk1[0].note_proc_inst/note_audio[7][5]
+    SLICE_X8Y53          LUT3 (Prop_lut3_I2_O)        0.152     7.670 r  genblk1[0].note_proc_inst/sreg[10]_i_26/O
+                         net (fo=2, routed)           0.859     8.529    genblk1[0].note_proc_inst/sreg[10]_i_26_n_0
+    SLICE_X8Y53          LUT4 (Prop_lut4_I3_O)        0.348     8.877 r  genblk1[0].note_proc_inst/sreg[10]_i_30/O
+                         net (fo=1, routed)           0.000     8.877    genblk1[0].note_proc_inst/sreg[10]_i_30_n_0
+    SLICE_X8Y53          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     9.257 r  genblk1[0].note_proc_inst/sreg_reg[10]_i_17/CO[3]
+                         net (fo=1, routed)           0.000     9.257    genblk1[0].note_proc_inst/sreg_reg[10]_i_17_n_0
+    SLICE_X8Y54          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     9.580 r  genblk1[0].note_proc_inst/sreg_reg[15]_i_15/O[1]
+                         net (fo=3, routed)           1.127    10.707    genblk1[1].note_proc_inst/sreg[10]_i_7_0[1]
+    SLICE_X7Y60          LUT3 (Prop_lut3_I2_O)        0.306    11.013 r  genblk1[1].note_proc_inst/sreg[10]_i_16/O
+                         net (fo=2, routed)           0.815    11.828    genblk1[1].note_proc_inst/sreg[10]_i_16_n_0
+    SLICE_X7Y59          LUT5 (Prop_lut5_I4_O)        0.124    11.952 r  genblk1[1].note_proc_inst/sreg[10]_i_4/O
+                         net (fo=2, routed)           0.882    12.834    genblk1[1].note_proc_inst/sreg[10]_i_4_n_0
+    SLICE_X6Y59          LUT6 (Prop_lut6_I0_O)        0.124    12.958 r  genblk1[1].note_proc_inst/sreg[10]_i_8/O
+                         net (fo=1, routed)           0.000    12.958    genblk1[1].note_proc_inst/sreg[10]_i_8_n_0
+    SLICE_X6Y59          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380    13.338 r  genblk1[1].note_proc_inst/sreg_reg[10]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    13.338    genblk1[1].note_proc_inst/sreg_reg[10]_i_2_n_0
+    SLICE_X6Y60          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    13.577 r  genblk1[1].note_proc_inst/sreg_reg[15]_i_2/O[2]
+                         net (fo=1, routed)           1.055    14.632    genblk1[1].note_proc_inst/sreg_reg[15]_i_2_n_5
+    SLICE_X6Y61          LUT4 (Prop_lut4_I0_O)        0.301    14.933 r  genblk1[1].note_proc_inst/sreg[13]_i_1/O
+                         net (fo=1, routed)           0.000    14.933    dac_inst/D[13]
+    SLICE_X6Y61          FDRE                                         r  dac_inst/sreg_reg[13]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 switches[3]
+  Source:                 switches[7]
                             (input port)
   Destination:            dac_inst/sreg_reg[12]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        17.179ns  (logic 5.001ns (29.108%)  route 12.179ns (70.892%))
-  Logic Levels:           13  (CARRY4=4 IBUF=1 LUT2=1 LUT3=2 LUT4=1 LUT5=2 LUT6=2)
+  Data Path Delay:        14.782ns  (logic 4.387ns (29.679%)  route 10.395ns (70.321%))
+  Logic Levels:           12  (CARRY4=4 IBUF=1 LUT3=2 LUT4=2 LUT5=1 LUT6=2)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    H6                                                0.000     0.000 r  switches[3] (IN)
-                         net (fo=0)                   0.000     0.000    switches[3]
-    H6                   IBUF (Prop_ibuf_I_O)         1.467     1.467 r  switches_IBUF[3]_inst/O
-                         net (fo=27, routed)          5.106     6.573    genblk1[3].note_proc_inst/switches_IBUF[0]
-    SLICE_X14Y67         LUT6 (Prop_lut6_I0_O)        0.124     6.697 r  genblk1[3].note_proc_inst/sreg[10]_i_63/O
-                         net (fo=2, routed)           1.318     8.015    genblk1[5].note_proc_inst/note_audio[3][3]
-    SLICE_X6Y64          LUT3 (Prop_lut3_I1_O)        0.156     8.171 r  genblk1[5].note_proc_inst/sreg[10]_i_36/O
-                         net (fo=2, routed)           0.607     8.777    genblk1[5].note_proc_inst/sreg[10]_i_36_n_0
-    SLICE_X6Y65          LUT4 (Prop_lut4_I3_O)        0.355     9.132 r  genblk1[5].note_proc_inst/sreg[10]_i_40/O
-                         net (fo=1, routed)           0.000     9.132    genblk1[5].note_proc_inst/sreg[10]_i_40_n_0
-    SLICE_X6Y65          CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.513     9.645 r  genblk1[5].note_proc_inst/sreg_reg[10]_i_18/CO[3]
-                         net (fo=1, routed)           0.000     9.645    genblk1[5].note_proc_inst/sreg_reg[10]_i_18_n_0
-    SLICE_X6Y66          CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.219     9.864 r  genblk1[5].note_proc_inst/sreg_reg[15]_i_26/O[0]
-                         net (fo=3, routed)           1.378    11.242    genblk1[1].note_proc_inst/sreg[10]_i_7_1[0]
-    SLICE_X7Y62          LUT3 (Prop_lut3_I1_O)        0.295    11.537 r  genblk1[1].note_proc_inst/sreg[10]_i_21/O
-                         net (fo=2, routed)           0.533    12.070    genblk1[1].note_proc_inst/sreg[10]_i_21_n_0
-    SLICE_X7Y61          LUT5 (Prop_lut5_I4_O)        0.124    12.194 r  genblk1[1].note_proc_inst/sreg[10]_i_5/O
-                         net (fo=2, routed)           1.105    13.299    genblk1[1].note_proc_inst/sreg[10]_i_5_n_0
-    SLICE_X6Y62          LUT6 (Prop_lut6_I0_O)        0.124    13.423 r  genblk1[1].note_proc_inst/sreg[10]_i_9/O
-                         net (fo=1, routed)           0.000    13.423    genblk1[1].note_proc_inst/sreg[10]_i_9_n_0
-    SLICE_X6Y62          CARRY4 (Prop_carry4_S[1]_O[3])
-                                                      0.643    14.066 f  genblk1[1].note_proc_inst/sreg_reg[10]_i_2/O[3]
-                         net (fo=2, routed)           0.948    15.013    genblk1[1].note_proc_inst/sreg_reg[10]_i_2_n_4
-    SLICE_X4Y64          LUT2 (Prop_lut2_I1_O)        0.307    15.320 r  genblk1[1].note_proc_inst/sreg[15]_i_6/O
-                         net (fo=1, routed)           0.000    15.320    genblk1[1].note_proc_inst/sreg[15]_i_6_n_0
-    SLICE_X4Y64          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    15.870 f  genblk1[1].note_proc_inst/sreg_reg[15]_i_2/CO[3]
-                         net (fo=16, routed)          1.185    17.055    genblk1[1].note_proc_inst/CO[0]
-    SLICE_X3Y64          LUT5 (Prop_lut5_I1_O)        0.124    17.179 r  genblk1[1].note_proc_inst/sreg[12]_i_1/O
-                         net (fo=1, routed)           0.000    17.179    dac_inst/D[12]
-    SLICE_X3Y64          FDRE                                         r  dac_inst/sreg_reg[12]/D
+    T8                                                0.000     0.000 r  switches[7] (IN)
+                         net (fo=0)                   0.000     0.000    switches[7]
+    T8                   IBUF (Prop_ibuf_I_O)         1.497     1.497 r  switches_IBUF[7]_inst/O
+                         net (fo=29, routed)          4.726     6.223    genblk1[7].note_proc_inst/switches_IBUF[0]
+    SLICE_X6Y49          LUT6 (Prop_lut6_I0_O)        0.124     6.347 r  genblk1[7].note_proc_inst/sreg[10]_i_46/O
+                         net (fo=2, routed)           1.171     7.518    genblk1[0].note_proc_inst/note_audio[7][5]
+    SLICE_X8Y53          LUT3 (Prop_lut3_I2_O)        0.152     7.670 r  genblk1[0].note_proc_inst/sreg[10]_i_26/O
+                         net (fo=2, routed)           0.859     8.529    genblk1[0].note_proc_inst/sreg[10]_i_26_n_0
+    SLICE_X8Y53          LUT4 (Prop_lut4_I3_O)        0.348     8.877 r  genblk1[0].note_proc_inst/sreg[10]_i_30/O
+                         net (fo=1, routed)           0.000     8.877    genblk1[0].note_proc_inst/sreg[10]_i_30_n_0
+    SLICE_X8Y53          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     9.257 r  genblk1[0].note_proc_inst/sreg_reg[10]_i_17/CO[3]
+                         net (fo=1, routed)           0.000     9.257    genblk1[0].note_proc_inst/sreg_reg[10]_i_17_n_0
+    SLICE_X8Y54          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     9.580 r  genblk1[0].note_proc_inst/sreg_reg[15]_i_15/O[1]
+                         net (fo=3, routed)           1.127    10.707    genblk1[1].note_proc_inst/sreg[10]_i_7_0[1]
+    SLICE_X7Y60          LUT3 (Prop_lut3_I2_O)        0.306    11.013 r  genblk1[1].note_proc_inst/sreg[10]_i_16/O
+                         net (fo=2, routed)           0.815    11.828    genblk1[1].note_proc_inst/sreg[10]_i_16_n_0
+    SLICE_X7Y59          LUT5 (Prop_lut5_I4_O)        0.124    11.952 r  genblk1[1].note_proc_inst/sreg[10]_i_4/O
+                         net (fo=2, routed)           0.882    12.834    genblk1[1].note_proc_inst/sreg[10]_i_4_n_0
+    SLICE_X6Y59          LUT6 (Prop_lut6_I0_O)        0.124    12.958 r  genblk1[1].note_proc_inst/sreg[10]_i_8/O
+                         net (fo=1, routed)           0.000    12.958    genblk1[1].note_proc_inst/sreg[10]_i_8_n_0
+    SLICE_X6Y59          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380    13.338 r  genblk1[1].note_proc_inst/sreg_reg[10]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    13.338    genblk1[1].note_proc_inst/sreg_reg[10]_i_2_n_0
+    SLICE_X6Y60          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    13.661 r  genblk1[1].note_proc_inst/sreg_reg[15]_i_2/O[1]
+                         net (fo=1, routed)           0.815    14.476    genblk1[1].note_proc_inst/sreg_reg[15]_i_2_n_6
+    SLICE_X6Y61          LUT4 (Prop_lut4_I0_O)        0.306    14.782 r  genblk1[1].note_proc_inst/sreg[12]_i_1/O
+                         net (fo=1, routed)           0.000    14.782    dac_inst/D[12]
+    SLICE_X6Y61          FDRE                                         r  dac_inst/sreg_reg[12]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 switches[3]
+  Source:                 switches[7]
                             (input port)
-  Destination:            dac_inst/sreg_reg[0]/D
+  Destination:            dac_inst/sreg_reg[15]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        17.174ns  (logic 5.001ns (29.116%)  route 12.174ns (70.884%))
-  Logic Levels:           13  (CARRY4=4 IBUF=1 LUT2=1 LUT3=2 LUT4=2 LUT5=1 LUT6=2)
+  Data Path Delay:        14.584ns  (logic 4.406ns (30.212%)  route 10.178ns (69.788%))
+  Logic Levels:           12  (CARRY4=4 IBUF=1 LUT3=2 LUT4=2 LUT5=1 LUT6=2)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    H6                                                0.000     0.000 r  switches[3] (IN)
-                         net (fo=0)                   0.000     0.000    switches[3]
-    H6                   IBUF (Prop_ibuf_I_O)         1.467     1.467 r  switches_IBUF[3]_inst/O
-                         net (fo=27, routed)          5.106     6.573    genblk1[3].note_proc_inst/switches_IBUF[0]
-    SLICE_X14Y67         LUT6 (Prop_lut6_I0_O)        0.124     6.697 r  genblk1[3].note_proc_inst/sreg[10]_i_63/O
-                         net (fo=2, routed)           1.318     8.015    genblk1[5].note_proc_inst/note_audio[3][3]
-    SLICE_X6Y64          LUT3 (Prop_lut3_I1_O)        0.156     8.171 r  genblk1[5].note_proc_inst/sreg[10]_i_36/O
-                         net (fo=2, routed)           0.607     8.777    genblk1[5].note_proc_inst/sreg[10]_i_36_n_0
-    SLICE_X6Y65          LUT4 (Prop_lut4_I3_O)        0.355     9.132 r  genblk1[5].note_proc_inst/sreg[10]_i_40/O
-                         net (fo=1, routed)           0.000     9.132    genblk1[5].note_proc_inst/sreg[10]_i_40_n_0
-    SLICE_X6Y65          CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.513     9.645 r  genblk1[5].note_proc_inst/sreg_reg[10]_i_18/CO[3]
-                         net (fo=1, routed)           0.000     9.645    genblk1[5].note_proc_inst/sreg_reg[10]_i_18_n_0
-    SLICE_X6Y66          CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.219     9.864 r  genblk1[5].note_proc_inst/sreg_reg[15]_i_26/O[0]
-                         net (fo=3, routed)           1.378    11.242    genblk1[1].note_proc_inst/sreg[10]_i_7_1[0]
-    SLICE_X7Y62          LUT3 (Prop_lut3_I1_O)        0.295    11.537 r  genblk1[1].note_proc_inst/sreg[10]_i_21/O
-                         net (fo=2, routed)           0.533    12.070    genblk1[1].note_proc_inst/sreg[10]_i_21_n_0
-    SLICE_X7Y61          LUT5 (Prop_lut5_I4_O)        0.124    12.194 r  genblk1[1].note_proc_inst/sreg[10]_i_5/O
-                         net (fo=2, routed)           1.105    13.299    genblk1[1].note_proc_inst/sreg[10]_i_5_n_0
-    SLICE_X6Y62          LUT6 (Prop_lut6_I0_O)        0.124    13.423 r  genblk1[1].note_proc_inst/sreg[10]_i_9/O
-                         net (fo=1, routed)           0.000    13.423    genblk1[1].note_proc_inst/sreg[10]_i_9_n_0
-    SLICE_X6Y62          CARRY4 (Prop_carry4_S[1]_O[3])
-                                                      0.643    14.066 f  genblk1[1].note_proc_inst/sreg_reg[10]_i_2/O[3]
-                         net (fo=2, routed)           0.948    15.013    genblk1[1].note_proc_inst/sreg_reg[10]_i_2_n_4
-    SLICE_X4Y64          LUT2 (Prop_lut2_I1_O)        0.307    15.320 r  genblk1[1].note_proc_inst/sreg[15]_i_6/O
-                         net (fo=1, routed)           0.000    15.320    genblk1[1].note_proc_inst/sreg[15]_i_6_n_0
-    SLICE_X4Y64          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    15.870 r  genblk1[1].note_proc_inst/sreg_reg[15]_i_2/CO[3]
-                         net (fo=16, routed)          1.180    17.050    genblk1[0].note_proc_inst/CO[0]
-    SLICE_X2Y64          LUT4 (Prop_lut4_I3_O)        0.124    17.174 r  genblk1[0].note_proc_inst/sreg[0]_i_1/O
-                         net (fo=1, routed)           0.000    17.174    dac_inst/D[0]
-    SLICE_X2Y64          FDRE                                         r  dac_inst/sreg_reg[0]/D
+    T8                                                0.000     0.000 r  switches[7] (IN)
+                         net (fo=0)                   0.000     0.000    switches[7]
+    T8                   IBUF (Prop_ibuf_I_O)         1.497     1.497 r  switches_IBUF[7]_inst/O
+                         net (fo=29, routed)          4.726     6.223    genblk1[7].note_proc_inst/switches_IBUF[0]
+    SLICE_X6Y49          LUT6 (Prop_lut6_I0_O)        0.124     6.347 r  genblk1[7].note_proc_inst/sreg[10]_i_46/O
+                         net (fo=2, routed)           1.171     7.518    genblk1[0].note_proc_inst/note_audio[7][5]
+    SLICE_X8Y53          LUT3 (Prop_lut3_I2_O)        0.152     7.670 r  genblk1[0].note_proc_inst/sreg[10]_i_26/O
+                         net (fo=2, routed)           0.859     8.529    genblk1[0].note_proc_inst/sreg[10]_i_26_n_0
+    SLICE_X8Y53          LUT4 (Prop_lut4_I3_O)        0.348     8.877 r  genblk1[0].note_proc_inst/sreg[10]_i_30/O
+                         net (fo=1, routed)           0.000     8.877    genblk1[0].note_proc_inst/sreg[10]_i_30_n_0
+    SLICE_X8Y53          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     9.257 r  genblk1[0].note_proc_inst/sreg_reg[10]_i_17/CO[3]
+                         net (fo=1, routed)           0.000     9.257    genblk1[0].note_proc_inst/sreg_reg[10]_i_17_n_0
+    SLICE_X8Y54          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     9.580 r  genblk1[0].note_proc_inst/sreg_reg[15]_i_15/O[1]
+                         net (fo=3, routed)           1.127    10.707    genblk1[1].note_proc_inst/sreg[10]_i_7_0[1]
+    SLICE_X7Y60          LUT3 (Prop_lut3_I2_O)        0.306    11.013 r  genblk1[1].note_proc_inst/sreg[10]_i_16/O
+                         net (fo=2, routed)           0.815    11.828    genblk1[1].note_proc_inst/sreg[10]_i_16_n_0
+    SLICE_X7Y59          LUT5 (Prop_lut5_I4_O)        0.124    11.952 r  genblk1[1].note_proc_inst/sreg[10]_i_4/O
+                         net (fo=2, routed)           0.882    12.834    genblk1[1].note_proc_inst/sreg[10]_i_4_n_0
+    SLICE_X6Y59          LUT6 (Prop_lut6_I0_O)        0.124    12.958 r  genblk1[1].note_proc_inst/sreg[10]_i_8/O
+                         net (fo=1, routed)           0.000    12.958    genblk1[1].note_proc_inst/sreg[10]_i_8_n_0
+    SLICE_X6Y59          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380    13.338 r  genblk1[1].note_proc_inst/sreg_reg[10]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    13.338    genblk1[1].note_proc_inst/sreg_reg[10]_i_2_n_0
+    SLICE_X6Y60          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315    13.653 r  genblk1[1].note_proc_inst/sreg_reg[15]_i_2/O[3]
+                         net (fo=2, routed)           0.598    14.251    genblk1[1].note_proc_inst/L_data0
+    SLICE_X6Y62          LUT4 (Prop_lut4_I0_O)        0.333    14.584 r  genblk1[1].note_proc_inst/sreg[15]_i_1/O
+                         net (fo=1, routed)           0.000    14.584    dac_inst/D[15]
+    SLICE_X6Y62          FDRE                                         r  dac_inst/sreg_reg[15]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 switches[3]
+  Source:                 switches[7]
                             (input port)
-  Destination:            dac_inst/sreg_reg[1]/D
+  Destination:            dac_inst/sreg_reg[14]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        17.170ns  (logic 5.001ns (29.123%)  route 12.170ns (70.877%))
-  Logic Levels:           13  (CARRY4=4 IBUF=1 LUT2=1 LUT3=2 LUT4=1 LUT5=2 LUT6=2)
+  Data Path Delay:        14.558ns  (logic 4.380ns (30.087%)  route 10.178ns (69.913%))
+  Logic Levels:           12  (CARRY4=4 IBUF=1 LUT3=2 LUT4=2 LUT5=1 LUT6=2)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    H6                                                0.000     0.000 r  switches[3] (IN)
-                         net (fo=0)                   0.000     0.000    switches[3]
-    H6                   IBUF (Prop_ibuf_I_O)         1.467     1.467 r  switches_IBUF[3]_inst/O
-                         net (fo=27, routed)          5.106     6.573    genblk1[3].note_proc_inst/switches_IBUF[0]
-    SLICE_X14Y67         LUT6 (Prop_lut6_I0_O)        0.124     6.697 r  genblk1[3].note_proc_inst/sreg[10]_i_63/O
-                         net (fo=2, routed)           1.318     8.015    genblk1[5].note_proc_inst/note_audio[3][3]
-    SLICE_X6Y64          LUT3 (Prop_lut3_I1_O)        0.156     8.171 r  genblk1[5].note_proc_inst/sreg[10]_i_36/O
-                         net (fo=2, routed)           0.607     8.777    genblk1[5].note_proc_inst/sreg[10]_i_36_n_0
-    SLICE_X6Y65          LUT4 (Prop_lut4_I3_O)        0.355     9.132 r  genblk1[5].note_proc_inst/sreg[10]_i_40/O
-                         net (fo=1, routed)           0.000     9.132    genblk1[5].note_proc_inst/sreg[10]_i_40_n_0
-    SLICE_X6Y65          CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.513     9.645 r  genblk1[5].note_proc_inst/sreg_reg[10]_i_18/CO[3]
-                         net (fo=1, routed)           0.000     9.645    genblk1[5].note_proc_inst/sreg_reg[10]_i_18_n_0
-    SLICE_X6Y66          CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.219     9.864 r  genblk1[5].note_proc_inst/sreg_reg[15]_i_26/O[0]
-                         net (fo=3, routed)           1.378    11.242    genblk1[1].note_proc_inst/sreg[10]_i_7_1[0]
-    SLICE_X7Y62          LUT3 (Prop_lut3_I1_O)        0.295    11.537 r  genblk1[1].note_proc_inst/sreg[10]_i_21/O
-                         net (fo=2, routed)           0.533    12.070    genblk1[1].note_proc_inst/sreg[10]_i_21_n_0
-    SLICE_X7Y61          LUT5 (Prop_lut5_I4_O)        0.124    12.194 r  genblk1[1].note_proc_inst/sreg[10]_i_5/O
-                         net (fo=2, routed)           1.105    13.299    genblk1[1].note_proc_inst/sreg[10]_i_5_n_0
-    SLICE_X6Y62          LUT6 (Prop_lut6_I0_O)        0.124    13.423 r  genblk1[1].note_proc_inst/sreg[10]_i_9/O
-                         net (fo=1, routed)           0.000    13.423    genblk1[1].note_proc_inst/sreg[10]_i_9_n_0
-    SLICE_X6Y62          CARRY4 (Prop_carry4_S[1]_O[3])
-                                                      0.643    14.066 f  genblk1[1].note_proc_inst/sreg_reg[10]_i_2/O[3]
-                         net (fo=2, routed)           0.948    15.013    genblk1[1].note_proc_inst/sreg_reg[10]_i_2_n_4
-    SLICE_X4Y64          LUT2 (Prop_lut2_I1_O)        0.307    15.320 r  genblk1[1].note_proc_inst/sreg[15]_i_6/O
-                         net (fo=1, routed)           0.000    15.320    genblk1[1].note_proc_inst/sreg[15]_i_6_n_0
-    SLICE_X4Y64          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    15.870 f  genblk1[1].note_proc_inst/sreg_reg[15]_i_2/CO[3]
-                         net (fo=16, routed)          1.176    17.046    genblk1[0].note_proc_inst/CO[0]
-    SLICE_X2Y63          LUT5 (Prop_lut5_I1_O)        0.124    17.170 r  genblk1[0].note_proc_inst/sreg[1]_i_1/O
-                         net (fo=1, routed)           0.000    17.170    dac_inst/D[1]
-    SLICE_X2Y63          FDRE                                         r  dac_inst/sreg_reg[1]/D
+    T8                                                0.000     0.000 r  switches[7] (IN)
+                         net (fo=0)                   0.000     0.000    switches[7]
+    T8                   IBUF (Prop_ibuf_I_O)         1.497     1.497 r  switches_IBUF[7]_inst/O
+                         net (fo=29, routed)          4.726     6.223    genblk1[7].note_proc_inst/switches_IBUF[0]
+    SLICE_X6Y49          LUT6 (Prop_lut6_I0_O)        0.124     6.347 r  genblk1[7].note_proc_inst/sreg[10]_i_46/O
+                         net (fo=2, routed)           1.171     7.518    genblk1[0].note_proc_inst/note_audio[7][5]
+    SLICE_X8Y53          LUT3 (Prop_lut3_I2_O)        0.152     7.670 r  genblk1[0].note_proc_inst/sreg[10]_i_26/O
+                         net (fo=2, routed)           0.859     8.529    genblk1[0].note_proc_inst/sreg[10]_i_26_n_0
+    SLICE_X8Y53          LUT4 (Prop_lut4_I3_O)        0.348     8.877 r  genblk1[0].note_proc_inst/sreg[10]_i_30/O
+                         net (fo=1, routed)           0.000     8.877    genblk1[0].note_proc_inst/sreg[10]_i_30_n_0
+    SLICE_X8Y53          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     9.257 r  genblk1[0].note_proc_inst/sreg_reg[10]_i_17/CO[3]
+                         net (fo=1, routed)           0.000     9.257    genblk1[0].note_proc_inst/sreg_reg[10]_i_17_n_0
+    SLICE_X8Y54          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     9.580 r  genblk1[0].note_proc_inst/sreg_reg[15]_i_15/O[1]
+                         net (fo=3, routed)           1.127    10.707    genblk1[1].note_proc_inst/sreg[10]_i_7_0[1]
+    SLICE_X7Y60          LUT3 (Prop_lut3_I2_O)        0.306    11.013 r  genblk1[1].note_proc_inst/sreg[10]_i_16/O
+                         net (fo=2, routed)           0.815    11.828    genblk1[1].note_proc_inst/sreg[10]_i_16_n_0
+    SLICE_X7Y59          LUT5 (Prop_lut5_I4_O)        0.124    11.952 r  genblk1[1].note_proc_inst/sreg[10]_i_4/O
+                         net (fo=2, routed)           0.882    12.834    genblk1[1].note_proc_inst/sreg[10]_i_4_n_0
+    SLICE_X6Y59          LUT6 (Prop_lut6_I0_O)        0.124    12.958 r  genblk1[1].note_proc_inst/sreg[10]_i_8/O
+                         net (fo=1, routed)           0.000    12.958    genblk1[1].note_proc_inst/sreg[10]_i_8_n_0
+    SLICE_X6Y59          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380    13.338 r  genblk1[1].note_proc_inst/sreg_reg[10]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    13.338    genblk1[1].note_proc_inst/sreg_reg[10]_i_2_n_0
+    SLICE_X6Y60          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315    13.653 r  genblk1[1].note_proc_inst/sreg_reg[15]_i_2/O[3]
+                         net (fo=2, routed)           0.598    14.251    genblk1[1].note_proc_inst/L_data0
+    SLICE_X6Y62          LUT4 (Prop_lut4_I0_O)        0.307    14.558 r  genblk1[1].note_proc_inst/sreg[14]_i_1/O
+                         net (fo=1, routed)           0.000    14.558    dac_inst/D[14]
+    SLICE_X6Y62          FDRE                                         r  dac_inst/sreg_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 switches[7]
+                            (input port)
+  Destination:            dac_inst/sreg_reg[11]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        14.516ns  (logic 4.272ns (29.429%)  route 10.244ns (70.571%))
+  Logic Levels:           12  (CARRY4=4 IBUF=1 LUT3=2 LUT4=2 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    T8                                                0.000     0.000 r  switches[7] (IN)
+                         net (fo=0)                   0.000     0.000    switches[7]
+    T8                   IBUF (Prop_ibuf_I_O)         1.497     1.497 r  switches_IBUF[7]_inst/O
+                         net (fo=29, routed)          4.726     6.223    genblk1[7].note_proc_inst/switches_IBUF[0]
+    SLICE_X6Y49          LUT6 (Prop_lut6_I0_O)        0.124     6.347 r  genblk1[7].note_proc_inst/sreg[10]_i_46/O
+                         net (fo=2, routed)           1.171     7.518    genblk1[0].note_proc_inst/note_audio[7][5]
+    SLICE_X8Y53          LUT3 (Prop_lut3_I2_O)        0.152     7.670 r  genblk1[0].note_proc_inst/sreg[10]_i_26/O
+                         net (fo=2, routed)           0.859     8.529    genblk1[0].note_proc_inst/sreg[10]_i_26_n_0
+    SLICE_X8Y53          LUT4 (Prop_lut4_I3_O)        0.348     8.877 r  genblk1[0].note_proc_inst/sreg[10]_i_30/O
+                         net (fo=1, routed)           0.000     8.877    genblk1[0].note_proc_inst/sreg[10]_i_30_n_0
+    SLICE_X8Y53          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     9.257 r  genblk1[0].note_proc_inst/sreg_reg[10]_i_17/CO[3]
+                         net (fo=1, routed)           0.000     9.257    genblk1[0].note_proc_inst/sreg_reg[10]_i_17_n_0
+    SLICE_X8Y54          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     9.580 r  genblk1[0].note_proc_inst/sreg_reg[15]_i_15/O[1]
+                         net (fo=3, routed)           1.127    10.707    genblk1[1].note_proc_inst/sreg[10]_i_7_0[1]
+    SLICE_X7Y60          LUT3 (Prop_lut3_I2_O)        0.306    11.013 r  genblk1[1].note_proc_inst/sreg[10]_i_16/O
+                         net (fo=2, routed)           0.815    11.828    genblk1[1].note_proc_inst/sreg[10]_i_16_n_0
+    SLICE_X7Y59          LUT5 (Prop_lut5_I4_O)        0.124    11.952 r  genblk1[1].note_proc_inst/sreg[10]_i_4/O
+                         net (fo=2, routed)           0.882    12.834    genblk1[1].note_proc_inst/sreg[10]_i_4_n_0
+    SLICE_X6Y59          LUT6 (Prop_lut6_I0_O)        0.124    12.958 r  genblk1[1].note_proc_inst/sreg[10]_i_8/O
+                         net (fo=1, routed)           0.000    12.958    genblk1[1].note_proc_inst/sreg[10]_i_8_n_0
+    SLICE_X6Y59          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380    13.338 r  genblk1[1].note_proc_inst/sreg_reg[10]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    13.338    genblk1[1].note_proc_inst/sreg_reg[10]_i_2_n_0
+    SLICE_X6Y60          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    13.557 r  genblk1[1].note_proc_inst/sreg_reg[15]_i_2/O[0]
+                         net (fo=1, routed)           0.665    14.221    genblk1[1].note_proc_inst/sreg_reg[15]_i_2_n_7
+    SLICE_X6Y61          LUT4 (Prop_lut4_I0_O)        0.295    14.516 r  genblk1[1].note_proc_inst/sreg[11]_i_1/O
+                         net (fo=1, routed)           0.000    14.516    dac_inst/D[11]
+    SLICE_X6Y61          FDRE                                         r  dac_inst/sreg_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 switches[7]
+                            (input port)
+  Destination:            dac_inst/sreg_reg[8]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        14.251ns  (logic 4.385ns (30.769%)  route 9.866ns (69.231%))
+  Logic Levels:           12  (CARRY4=4 IBUF=1 LUT3=2 LUT4=2 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    T8                                                0.000     0.000 r  switches[7] (IN)
+                         net (fo=0)                   0.000     0.000    switches[7]
+    T8                   IBUF (Prop_ibuf_I_O)         1.497     1.497 r  switches_IBUF[7]_inst/O
+                         net (fo=29, routed)          4.371     5.868    genblk1[7].note_proc_inst/switches_IBUF[0]
+    SLICE_X6Y48          LUT6 (Prop_lut6_I0_O)        0.124     5.992 r  genblk1[7].note_proc_inst/sreg[6]_i_44/O
+                         net (fo=2, routed)           1.040     7.032    genblk1[0].note_proc_inst/note_audio[7][1]
+    SLICE_X8Y52          LUT3 (Prop_lut3_I2_O)        0.150     7.182 r  genblk1[0].note_proc_inst/sreg[6]_i_26/O
+                         net (fo=2, routed)           0.859     8.041    genblk1[0].note_proc_inst/sreg[6]_i_26_n_0
+    SLICE_X8Y52          LUT4 (Prop_lut4_I3_O)        0.348     8.389 r  genblk1[0].note_proc_inst/sreg[6]_i_29/O
+                         net (fo=1, routed)           0.000     8.389    genblk1[0].note_proc_inst/sreg[6]_i_29_n_0
+    SLICE_X8Y52          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     8.769 r  genblk1[0].note_proc_inst/sreg_reg[6]_i_17/CO[3]
+                         net (fo=1, routed)           0.000     8.769    genblk1[0].note_proc_inst/sreg_reg[6]_i_17_n_0
+    SLICE_X8Y53          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     9.092 r  genblk1[0].note_proc_inst/sreg_reg[10]_i_17/O[1]
+                         net (fo=3, routed)           1.439    10.531    genblk1[1].note_proc_inst/sreg[6]_i_7_0[1]
+    SLICE_X7Y58          LUT3 (Prop_lut3_I2_O)        0.306    10.837 r  genblk1[1].note_proc_inst/sreg[6]_i_16/O
+                         net (fo=2, routed)           0.533    11.370    genblk1[1].note_proc_inst/sreg[6]_i_16_n_0
+    SLICE_X7Y57          LUT5 (Prop_lut5_I4_O)        0.124    11.494 r  genblk1[1].note_proc_inst/sreg[6]_i_4/O
+                         net (fo=2, routed)           0.821    12.315    genblk1[1].note_proc_inst/sreg[6]_i_4_n_0
+    SLICE_X6Y58          LUT6 (Prop_lut6_I0_O)        0.124    12.439 r  genblk1[1].note_proc_inst/sreg[6]_i_8/O
+                         net (fo=1, routed)           0.000    12.439    genblk1[1].note_proc_inst/sreg[6]_i_8_n_0
+    SLICE_X6Y58          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380    12.819 r  genblk1[1].note_proc_inst/sreg_reg[6]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    12.819    genblk1[1].note_proc_inst/sreg_reg[6]_i_2_n_0
+    SLICE_X6Y59          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    13.142 r  genblk1[1].note_proc_inst/sreg_reg[10]_i_2/O[1]
+                         net (fo=1, routed)           0.803    13.945    genblk1[1].note_proc_inst/sreg_reg[10]_i_2_n_6
+    SLICE_X5Y59          LUT4 (Prop_lut4_I0_O)        0.306    14.251 r  genblk1[1].note_proc_inst/sreg[8]_i_1/O
+                         net (fo=1, routed)           0.000    14.251    dac_inst/D[8]
+    SLICE_X5Y59          FDRE                                         r  dac_inst/sreg_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 switches[7]
+                            (input port)
+  Destination:            dac_inst/sreg_reg[7]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        14.149ns  (logic 4.270ns (30.179%)  route 9.879ns (69.821%))
+  Logic Levels:           12  (CARRY4=4 IBUF=1 LUT3=2 LUT4=2 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    T8                                                0.000     0.000 r  switches[7] (IN)
+                         net (fo=0)                   0.000     0.000    switches[7]
+    T8                   IBUF (Prop_ibuf_I_O)         1.497     1.497 r  switches_IBUF[7]_inst/O
+                         net (fo=29, routed)          4.371     5.868    genblk1[7].note_proc_inst/switches_IBUF[0]
+    SLICE_X6Y48          LUT6 (Prop_lut6_I0_O)        0.124     5.992 r  genblk1[7].note_proc_inst/sreg[6]_i_44/O
+                         net (fo=2, routed)           1.040     7.032    genblk1[0].note_proc_inst/note_audio[7][1]
+    SLICE_X8Y52          LUT3 (Prop_lut3_I2_O)        0.150     7.182 r  genblk1[0].note_proc_inst/sreg[6]_i_26/O
+                         net (fo=2, routed)           0.859     8.041    genblk1[0].note_proc_inst/sreg[6]_i_26_n_0
+    SLICE_X8Y52          LUT4 (Prop_lut4_I3_O)        0.348     8.389 r  genblk1[0].note_proc_inst/sreg[6]_i_29/O
+                         net (fo=1, routed)           0.000     8.389    genblk1[0].note_proc_inst/sreg[6]_i_29_n_0
+    SLICE_X8Y52          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     8.769 r  genblk1[0].note_proc_inst/sreg_reg[6]_i_17/CO[3]
+                         net (fo=1, routed)           0.000     8.769    genblk1[0].note_proc_inst/sreg_reg[6]_i_17_n_0
+    SLICE_X8Y53          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     9.092 r  genblk1[0].note_proc_inst/sreg_reg[10]_i_17/O[1]
+                         net (fo=3, routed)           1.439    10.531    genblk1[1].note_proc_inst/sreg[6]_i_7_0[1]
+    SLICE_X7Y58          LUT3 (Prop_lut3_I2_O)        0.306    10.837 r  genblk1[1].note_proc_inst/sreg[6]_i_16/O
+                         net (fo=2, routed)           0.533    11.370    genblk1[1].note_proc_inst/sreg[6]_i_16_n_0
+    SLICE_X7Y57          LUT5 (Prop_lut5_I4_O)        0.124    11.494 r  genblk1[1].note_proc_inst/sreg[6]_i_4/O
+                         net (fo=2, routed)           0.821    12.315    genblk1[1].note_proc_inst/sreg[6]_i_4_n_0
+    SLICE_X6Y58          LUT6 (Prop_lut6_I0_O)        0.124    12.439 r  genblk1[1].note_proc_inst/sreg[6]_i_8/O
+                         net (fo=1, routed)           0.000    12.439    genblk1[1].note_proc_inst/sreg[6]_i_8_n_0
+    SLICE_X6Y58          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380    12.819 r  genblk1[1].note_proc_inst/sreg_reg[6]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    12.819    genblk1[1].note_proc_inst/sreg_reg[6]_i_2_n_0
+    SLICE_X6Y59          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    13.038 r  genblk1[1].note_proc_inst/sreg_reg[10]_i_2/O[0]
+                         net (fo=1, routed)           0.816    13.854    genblk1[1].note_proc_inst/sreg_reg[10]_i_2_n_7
+    SLICE_X5Y58          LUT4 (Prop_lut4_I0_O)        0.295    14.149 r  genblk1[1].note_proc_inst/sreg[7]_i_1/O
+                         net (fo=1, routed)           0.000    14.149    dac_inst/D[7]
+    SLICE_X5Y58          FDRE                                         r  dac_inst/sreg_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 switches[7]
+                            (input port)
+  Destination:            dac_inst/sreg_reg[9]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        14.077ns  (logic 3.929ns (27.911%)  route 10.148ns (72.089%))
+  Logic Levels:           11  (CARRY4=3 IBUF=1 LUT3=2 LUT4=2 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    T8                                                0.000     0.000 r  switches[7] (IN)
+                         net (fo=0)                   0.000     0.000    switches[7]
+    T8                   IBUF (Prop_ibuf_I_O)         1.497     1.497 r  switches_IBUF[7]_inst/O
+                         net (fo=29, routed)          4.726     6.223    genblk1[7].note_proc_inst/switches_IBUF[0]
+    SLICE_X6Y49          LUT6 (Prop_lut6_I0_O)        0.124     6.347 r  genblk1[7].note_proc_inst/sreg[10]_i_46/O
+                         net (fo=2, routed)           1.171     7.518    genblk1[0].note_proc_inst/note_audio[7][5]
+    SLICE_X8Y53          LUT3 (Prop_lut3_I2_O)        0.152     7.670 r  genblk1[0].note_proc_inst/sreg[10]_i_26/O
+                         net (fo=2, routed)           0.859     8.529    genblk1[0].note_proc_inst/sreg[10]_i_26_n_0
+    SLICE_X8Y53          LUT4 (Prop_lut4_I3_O)        0.348     8.877 r  genblk1[0].note_proc_inst/sreg[10]_i_30/O
+                         net (fo=1, routed)           0.000     8.877    genblk1[0].note_proc_inst/sreg[10]_i_30_n_0
+    SLICE_X8Y53          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     9.257 r  genblk1[0].note_proc_inst/sreg_reg[10]_i_17/CO[3]
+                         net (fo=1, routed)           0.000     9.257    genblk1[0].note_proc_inst/sreg_reg[10]_i_17_n_0
+    SLICE_X8Y54          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     9.580 r  genblk1[0].note_proc_inst/sreg_reg[15]_i_15/O[1]
+                         net (fo=3, routed)           1.127    10.707    genblk1[1].note_proc_inst/sreg[10]_i_7_0[1]
+    SLICE_X7Y60          LUT3 (Prop_lut3_I2_O)        0.306    11.013 r  genblk1[1].note_proc_inst/sreg[10]_i_16/O
+                         net (fo=2, routed)           0.815    11.828    genblk1[1].note_proc_inst/sreg[10]_i_16_n_0
+    SLICE_X7Y59          LUT5 (Prop_lut5_I4_O)        0.124    11.952 r  genblk1[1].note_proc_inst/sreg[10]_i_4/O
+                         net (fo=2, routed)           0.882    12.834    genblk1[1].note_proc_inst/sreg[10]_i_4_n_0
+    SLICE_X6Y59          LUT6 (Prop_lut6_I0_O)        0.124    12.958 r  genblk1[1].note_proc_inst/sreg[10]_i_8/O
+                         net (fo=1, routed)           0.000    12.958    genblk1[1].note_proc_inst/sreg[10]_i_8_n_0
+    SLICE_X6Y59          CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.250    13.208 r  genblk1[1].note_proc_inst/sreg_reg[10]_i_2/O[2]
+                         net (fo=1, routed)           0.569    13.776    genblk1[1].note_proc_inst/sreg_reg[10]_i_2_n_5
+    SLICE_X5Y59          LUT4 (Prop_lut4_I0_O)        0.301    14.077 r  genblk1[1].note_proc_inst/sreg[9]_i_1/O
+                         net (fo=1, routed)           0.000    14.077    dac_inst/D[9]
+    SLICE_X5Y59          FDRE                                         r  dac_inst/sreg_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 switches[7]
+                            (input port)
+  Destination:            dac_inst/sreg_reg[10]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        14.050ns  (logic 4.037ns (28.734%)  route 10.013ns (71.266%))
+  Logic Levels:           11  (CARRY4=3 IBUF=1 LUT3=2 LUT4=2 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    T8                                                0.000     0.000 r  switches[7] (IN)
+                         net (fo=0)                   0.000     0.000    switches[7]
+    T8                   IBUF (Prop_ibuf_I_O)         1.497     1.497 r  switches_IBUF[7]_inst/O
+                         net (fo=29, routed)          4.726     6.223    genblk1[7].note_proc_inst/switches_IBUF[0]
+    SLICE_X6Y49          LUT6 (Prop_lut6_I0_O)        0.124     6.347 r  genblk1[7].note_proc_inst/sreg[10]_i_46/O
+                         net (fo=2, routed)           1.171     7.518    genblk1[0].note_proc_inst/note_audio[7][5]
+    SLICE_X8Y53          LUT3 (Prop_lut3_I2_O)        0.152     7.670 r  genblk1[0].note_proc_inst/sreg[10]_i_26/O
+                         net (fo=2, routed)           0.859     8.529    genblk1[0].note_proc_inst/sreg[10]_i_26_n_0
+    SLICE_X8Y53          LUT4 (Prop_lut4_I3_O)        0.348     8.877 r  genblk1[0].note_proc_inst/sreg[10]_i_30/O
+                         net (fo=1, routed)           0.000     8.877    genblk1[0].note_proc_inst/sreg[10]_i_30_n_0
+    SLICE_X8Y53          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     9.257 r  genblk1[0].note_proc_inst/sreg_reg[10]_i_17/CO[3]
+                         net (fo=1, routed)           0.000     9.257    genblk1[0].note_proc_inst/sreg_reg[10]_i_17_n_0
+    SLICE_X8Y54          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     9.580 r  genblk1[0].note_proc_inst/sreg_reg[15]_i_15/O[1]
+                         net (fo=3, routed)           1.127    10.707    genblk1[1].note_proc_inst/sreg[10]_i_7_0[1]
+    SLICE_X7Y60          LUT3 (Prop_lut3_I2_O)        0.306    11.013 r  genblk1[1].note_proc_inst/sreg[10]_i_16/O
+                         net (fo=2, routed)           0.815    11.828    genblk1[1].note_proc_inst/sreg[10]_i_16_n_0
+    SLICE_X7Y59          LUT5 (Prop_lut5_I4_O)        0.124    11.952 r  genblk1[1].note_proc_inst/sreg[10]_i_4/O
+                         net (fo=2, routed)           0.882    12.834    genblk1[1].note_proc_inst/sreg[10]_i_4_n_0
+    SLICE_X6Y59          LUT6 (Prop_lut6_I0_O)        0.124    12.958 r  genblk1[1].note_proc_inst/sreg[10]_i_8/O
+                         net (fo=1, routed)           0.000    12.958    genblk1[1].note_proc_inst/sreg[10]_i_8_n_0
+    SLICE_X6Y59          CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    13.310 r  genblk1[1].note_proc_inst/sreg_reg[10]_i_2/O[3]
+                         net (fo=1, routed)           0.433    13.743    genblk1[1].note_proc_inst/sreg_reg[10]_i_2_n_4
+    SLICE_X5Y61          LUT4 (Prop_lut4_I0_O)        0.307    14.050 r  genblk1[1].note_proc_inst/sreg[10]_i_1/O
+                         net (fo=1, routed)           0.000    14.050    dac_inst/D[10]
+    SLICE_X5Y61          FDRE                                         r  dac_inst/sreg_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 switches[7]
+                            (input port)
+  Destination:            dac_inst/sreg_reg[6]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        13.989ns  (logic 4.035ns (28.844%)  route 9.954ns (71.156%))
+  Logic Levels:           11  (CARRY4=3 IBUF=1 LUT3=2 LUT4=2 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    T8                                                0.000     0.000 r  switches[7] (IN)
+                         net (fo=0)                   0.000     0.000    switches[7]
+    T8                   IBUF (Prop_ibuf_I_O)         1.497     1.497 r  switches_IBUF[7]_inst/O
+                         net (fo=29, routed)          4.371     5.868    genblk1[7].note_proc_inst/switches_IBUF[0]
+    SLICE_X6Y48          LUT6 (Prop_lut6_I0_O)        0.124     5.992 r  genblk1[7].note_proc_inst/sreg[6]_i_44/O
+                         net (fo=2, routed)           1.040     7.032    genblk1[0].note_proc_inst/note_audio[7][1]
+    SLICE_X8Y52          LUT3 (Prop_lut3_I2_O)        0.150     7.182 r  genblk1[0].note_proc_inst/sreg[6]_i_26/O
+                         net (fo=2, routed)           0.859     8.041    genblk1[0].note_proc_inst/sreg[6]_i_26_n_0
+    SLICE_X8Y52          LUT4 (Prop_lut4_I3_O)        0.348     8.389 r  genblk1[0].note_proc_inst/sreg[6]_i_29/O
+                         net (fo=1, routed)           0.000     8.389    genblk1[0].note_proc_inst/sreg[6]_i_29_n_0
+    SLICE_X8Y52          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     8.769 r  genblk1[0].note_proc_inst/sreg_reg[6]_i_17/CO[3]
+                         net (fo=1, routed)           0.000     8.769    genblk1[0].note_proc_inst/sreg_reg[6]_i_17_n_0
+    SLICE_X8Y53          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     9.092 r  genblk1[0].note_proc_inst/sreg_reg[10]_i_17/O[1]
+                         net (fo=3, routed)           1.439    10.531    genblk1[1].note_proc_inst/sreg[6]_i_7_0[1]
+    SLICE_X7Y58          LUT3 (Prop_lut3_I2_O)        0.306    10.837 r  genblk1[1].note_proc_inst/sreg[6]_i_16/O
+                         net (fo=2, routed)           0.533    11.370    genblk1[1].note_proc_inst/sreg[6]_i_16_n_0
+    SLICE_X7Y57          LUT5 (Prop_lut5_I4_O)        0.124    11.494 r  genblk1[1].note_proc_inst/sreg[6]_i_4/O
+                         net (fo=2, routed)           0.821    12.315    genblk1[1].note_proc_inst/sreg[6]_i_4_n_0
+    SLICE_X6Y58          LUT6 (Prop_lut6_I0_O)        0.124    12.439 r  genblk1[1].note_proc_inst/sreg[6]_i_8/O
+                         net (fo=1, routed)           0.000    12.439    genblk1[1].note_proc_inst/sreg[6]_i_8_n_0
+    SLICE_X6Y58          CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    12.791 r  genblk1[1].note_proc_inst/sreg_reg[6]_i_2/O[3]
+                         net (fo=1, routed)           0.891    13.682    genblk1[1].note_proc_inst/sreg_reg[6]_i_2_n_4
+    SLICE_X9Y58          LUT4 (Prop_lut4_I0_O)        0.307    13.989 r  genblk1[1].note_proc_inst/sreg[6]_i_1/O
+                         net (fo=1, routed)           0.000    13.989    dac_inst/D[6]
+    SLICE_X9Y58          FDRE                                         r  dac_inst/sreg_reg[6]/D
   -------------------------------------------------------------------    -------------------
 
 
@@ -689,136 +660,79 @@ Slack:                    inf
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 dac_inst/sreg_reg[5]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            dac_inst/sreg_reg[6]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.263ns  (logic 0.212ns (80.577%)  route 0.051ns (19.423%))
-  Logic Levels:           2  (FDRE=1 LUT5=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X2Y63          FDRE                         0.000     0.000 r  dac_inst/sreg_reg[5]/C
-    SLICE_X2Y63          FDRE (Prop_fdre_C_Q)         0.167     0.167 r  dac_inst/sreg_reg[5]/Q
-                         net (fo=1, routed)           0.051     0.218    genblk1[1].note_proc_inst/Q[3]
-    SLICE_X3Y63          LUT5 (Prop_lut5_I4_O)        0.045     0.263 r  genblk1[1].note_proc_inst/sreg[6]_i_1/O
-                         net (fo=1, routed)           0.000     0.263    dac_inst/D[6]
-    SLICE_X3Y63          FDRE                                         r  dac_inst/sreg_reg[6]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 dac_inst/sreg_reg[2]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            dac_inst/sreg_reg[3]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.316ns  (logic 0.212ns (67.184%)  route 0.104ns (32.816%))
-  Logic Levels:           2  (FDRE=1 LUT5=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X2Y63          FDRE                         0.000     0.000 r  dac_inst/sreg_reg[2]/C
-    SLICE_X2Y63          FDRE (Prop_fdre_C_Q)         0.167     0.167 r  dac_inst/sreg_reg[2]/Q
-                         net (fo=1, routed)           0.104     0.271    genblk1[1].note_proc_inst/Q[0]
-    SLICE_X0Y63          LUT5 (Prop_lut5_I4_O)        0.045     0.316 r  genblk1[1].note_proc_inst/sreg[3]_i_1/O
-                         net (fo=1, routed)           0.000     0.316    dac_inst/D[3]
-    SLICE_X0Y63          FDRE                                         r  dac_inst/sreg_reg[3]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
   Source:                 dac_inst/sreg_reg[10]/C
                             (rising edge-triggered cell FDRE)
   Destination:            dac_inst/sreg_reg[11]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.349ns  (logic 0.191ns (54.712%)  route 0.158ns (45.288%))
-  Logic Levels:           2  (FDRE=1 LUT5=1)
+  Data Path Delay:        0.293ns  (logic 0.191ns (65.149%)  route 0.102ns (34.851%))
+  Logic Levels:           2  (FDRE=1 LUT4=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X3Y64          FDRE                         0.000     0.000 r  dac_inst/sreg_reg[10]/C
-    SLICE_X3Y64          FDRE (Prop_fdre_C_Q)         0.146     0.146 r  dac_inst/sreg_reg[10]/Q
-                         net (fo=1, routed)           0.158     0.304    genblk1[1].note_proc_inst/Q[8]
-    SLICE_X3Y64          LUT5 (Prop_lut5_I4_O)        0.045     0.349 r  genblk1[1].note_proc_inst/sreg[11]_i_1/O
-                         net (fo=1, routed)           0.000     0.349    dac_inst/D[11]
-    SLICE_X3Y64          FDRE                                         r  dac_inst/sreg_reg[11]/D
+    SLICE_X5Y61          FDRE                         0.000     0.000 r  dac_inst/sreg_reg[10]/C
+    SLICE_X5Y61          FDRE (Prop_fdre_C_Q)         0.146     0.146 r  dac_inst/sreg_reg[10]/Q
+                         net (fo=1, routed)           0.102     0.248    genblk1[1].note_proc_inst/Q[8]
+    SLICE_X6Y61          LUT4 (Prop_lut4_I3_O)        0.045     0.293 r  genblk1[1].note_proc_inst/sreg[11]_i_1/O
+                         net (fo=1, routed)           0.000     0.293    dac_inst/D[11]
+    SLICE_X6Y61          FDRE                                         r  dac_inst/sreg_reg[11]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 dac_inst/sreg_reg[14]/C
+  Source:                 dac_inst/sreg_reg[1]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            dac_inst/sreg_reg[15]/D
+  Destination:            dac_inst/sreg_reg[2]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.306ns  (logic 0.249ns (81.304%)  route 0.057ns (18.696%))
+  Logic Levels:           2  (FDRE=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y58          FDRE                         0.000     0.000 r  dac_inst/sreg_reg[1]/C
+    SLICE_X8Y58          FDRE (Prop_fdre_C_Q)         0.151     0.151 r  dac_inst/sreg_reg[1]/Q
+                         net (fo=1, routed)           0.057     0.208    genblk1[0].note_proc_inst/Q[1]
+    SLICE_X8Y58          LUT4 (Prop_lut4_I3_O)        0.098     0.306 r  genblk1[0].note_proc_inst/sreg[2]_i_1/O
+                         net (fo=1, routed)           0.000     0.306    dac_inst/D[2]
+    SLICE_X8Y58          FDRE                                         r  dac_inst/sreg_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 dac_inst/sreg_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            dac_inst/sreg_reg[6]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
   Data Path Delay:        0.349ns  (logic 0.191ns (54.712%)  route 0.158ns (45.288%))
-  Logic Levels:           2  (FDRE=1 LUT5=1)
+  Logic Levels:           2  (FDRE=1 LUT4=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X1Y64          FDRE                         0.000     0.000 r  dac_inst/sreg_reg[14]/C
-    SLICE_X1Y64          FDRE (Prop_fdre_C_Q)         0.146     0.146 r  dac_inst/sreg_reg[14]/Q
-                         net (fo=1, routed)           0.158     0.304    genblk1[1].note_proc_inst/Q[12]
-    SLICE_X1Y64          LUT5 (Prop_lut5_I4_O)        0.045     0.349 r  genblk1[1].note_proc_inst/sreg[15]_i_1/O
-                         net (fo=1, routed)           0.000     0.349    dac_inst/D[15]
-    SLICE_X1Y64          FDRE                                         r  dac_inst/sreg_reg[15]/D
+    SLICE_X9Y58          FDRE                         0.000     0.000 r  dac_inst/sreg_reg[5]/C
+    SLICE_X9Y58          FDRE (Prop_fdre_C_Q)         0.146     0.146 r  dac_inst/sreg_reg[5]/Q
+                         net (fo=1, routed)           0.158     0.304    genblk1[1].note_proc_inst/Q[3]
+    SLICE_X9Y58          LUT4 (Prop_lut4_I3_O)        0.045     0.349 r  genblk1[1].note_proc_inst/sreg[6]_i_1/O
+                         net (fo=1, routed)           0.000     0.349    dac_inst/D[6]
+    SLICE_X9Y58          FDRE                                         r  dac_inst/sreg_reg[6]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 dac_inst/sreg_reg[6]/C
+  Source:                 dac_inst/sreg_reg[8]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            dac_inst/sreg_reg[7]/D
+  Destination:            dac_inst/sreg_reg[9]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
   Data Path Delay:        0.349ns  (logic 0.191ns (54.712%)  route 0.158ns (45.288%))
-  Logic Levels:           2  (FDRE=1 LUT5=1)
+  Logic Levels:           2  (FDRE=1 LUT4=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X3Y63          FDRE                         0.000     0.000 r  dac_inst/sreg_reg[6]/C
-    SLICE_X3Y63          FDRE (Prop_fdre_C_Q)         0.146     0.146 r  dac_inst/sreg_reg[6]/Q
-                         net (fo=1, routed)           0.158     0.304    genblk1[1].note_proc_inst/Q[4]
-    SLICE_X3Y63          LUT5 (Prop_lut5_I4_O)        0.045     0.349 r  genblk1[1].note_proc_inst/sreg[7]_i_1/O
-                         net (fo=1, routed)           0.000     0.349    dac_inst/D[7]
-    SLICE_X3Y63          FDRE                                         r  dac_inst/sreg_reg[7]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 dac_inst/sreg_reg[3]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            dac_inst/sreg_reg[4]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.353ns  (logic 0.191ns (54.157%)  route 0.162ns (45.843%))
-  Logic Levels:           2  (FDRE=1 LUT5=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X0Y63          FDRE                         0.000     0.000 r  dac_inst/sreg_reg[3]/C
-    SLICE_X0Y63          FDRE (Prop_fdre_C_Q)         0.146     0.146 r  dac_inst/sreg_reg[3]/Q
-                         net (fo=1, routed)           0.162     0.308    genblk1[1].note_proc_inst/Q[1]
-    SLICE_X0Y63          LUT5 (Prop_lut5_I4_O)        0.045     0.353 r  genblk1[1].note_proc_inst/sreg[4]_i_1/O
-                         net (fo=1, routed)           0.000     0.353    dac_inst/D[4]
-    SLICE_X0Y63          FDRE                                         r  dac_inst/sreg_reg[4]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 dac_inst/sreg_reg[0]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            dac_inst/sreg_reg[1]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.353ns  (logic 0.212ns (60.027%)  route 0.141ns (39.973%))
-  Logic Levels:           2  (FDRE=1 LUT5=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X2Y64          FDRE                         0.000     0.000 r  dac_inst/sreg_reg[0]/C
-    SLICE_X2Y64          FDRE (Prop_fdre_C_Q)         0.167     0.167 r  dac_inst/sreg_reg[0]/Q
-                         net (fo=1, routed)           0.141     0.308    genblk1[0].note_proc_inst/Q[0]
-    SLICE_X2Y63          LUT5 (Prop_lut5_I4_O)        0.045     0.353 r  genblk1[0].note_proc_inst/sreg[1]_i_1/O
-                         net (fo=1, routed)           0.000     0.353    dac_inst/D[1]
-    SLICE_X2Y63          FDRE                                         r  dac_inst/sreg_reg[1]/D
+    SLICE_X5Y59          FDRE                         0.000     0.000 r  dac_inst/sreg_reg[8]/C
+    SLICE_X5Y59          FDRE (Prop_fdre_C_Q)         0.146     0.146 r  dac_inst/sreg_reg[8]/Q
+                         net (fo=1, routed)           0.158     0.304    genblk1[1].note_proc_inst/Q[6]
+    SLICE_X5Y59          LUT4 (Prop_lut4_I3_O)        0.045     0.349 r  genblk1[1].note_proc_inst/sreg[9]_i_1/O
+                         net (fo=1, routed)           0.000     0.349    dac_inst/D[9]
+    SLICE_X5Y59          FDRE                                         r  dac_inst/sreg_reg[9]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -832,19 +746,99 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X3Y81          FDRE                         0.000     0.000 r  tcount_reg[7]/C
-    SLICE_X3Y81          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  tcount_reg[7]/Q
+    SLICE_X3Y73          FDRE                         0.000     0.000 r  tcount_reg[7]/C
+    SLICE_X3Y73          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  tcount_reg[7]/Q
                          net (fo=2, routed)           0.119     0.260    tcount_reg[7]
-    SLICE_X3Y81          CARRY4 (Prop_carry4_S[3]_O[3])
+    SLICE_X3Y73          CARRY4 (Prop_carry4_S[3]_O[3])
                                                       0.108     0.368 r  tcount_reg[4]_i_1/O[3]
                          net (fo=1, routed)           0.000     0.368    tcount_reg[4]_i_1_n_4
-    SLICE_X3Y81          FDRE                                         r  tcount_reg[7]/D
+    SLICE_X3Y73          FDRE                                         r  tcount_reg[7]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 genblk1[3].note_proc_inst/count_reg[3]/C
+  Source:                 genblk1[0].note_proc_inst/count_reg[15]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            genblk1[3].note_proc_inst/count_reg[3]/D
+  Destination:            genblk1[0].note_proc_inst/count_reg[15]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.369ns  (logic 0.249ns (67.424%)  route 0.120ns (32.576%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y51          FDRE                         0.000     0.000 r  genblk1[0].note_proc_inst/count_reg[15]/C
+    SLICE_X7Y51          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  genblk1[0].note_proc_inst/count_reg[15]/Q
+                         net (fo=15, routed)          0.120     0.261    genblk1[0].note_proc_inst/count_reg[15]
+    SLICE_X7Y51          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.369 r  genblk1[0].note_proc_inst/count_reg[12]_i_1__6/O[3]
+                         net (fo=1, routed)           0.000     0.369    genblk1[0].note_proc_inst/count_reg[12]_i_1__6_n_4
+    SLICE_X7Y51          FDRE                                         r  genblk1[0].note_proc_inst/count_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 genblk1[3].note_proc_inst/count_reg[15]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            genblk1[3].note_proc_inst/count_reg[15]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.369ns  (logic 0.249ns (67.424%)  route 0.120ns (32.576%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X13Y66         FDRE                         0.000     0.000 r  genblk1[3].note_proc_inst/count_reg[15]/C
+    SLICE_X13Y66         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  genblk1[3].note_proc_inst/count_reg[15]/Q
+                         net (fo=15, routed)          0.120     0.261    genblk1[3].note_proc_inst/count_reg[15]
+    SLICE_X13Y66         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.369 r  genblk1[3].note_proc_inst/count_reg[12]_i_1__1/O[3]
+                         net (fo=1, routed)           0.000     0.369    genblk1[3].note_proc_inst/count_reg[12]_i_1__1_n_4
+    SLICE_X13Y66         FDRE                                         r  genblk1[3].note_proc_inst/count_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 genblk1[4].note_proc_inst/count_reg[11]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            genblk1[4].note_proc_inst/count_reg[11]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.369ns  (logic 0.249ns (67.424%)  route 0.120ns (32.576%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y65          FDRE                         0.000     0.000 r  genblk1[4].note_proc_inst/count_reg[11]/C
+    SLICE_X3Y65          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  genblk1[4].note_proc_inst/count_reg[11]/Q
+                         net (fo=4, routed)           0.120     0.261    genblk1[4].note_proc_inst/count_reg[11]
+    SLICE_X3Y65          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.369 r  genblk1[4].note_proc_inst/count_reg[8]_i_1__2/O[3]
+                         net (fo=1, routed)           0.000     0.369    genblk1[4].note_proc_inst/count_reg[8]_i_1__2_n_4
+    SLICE_X3Y65          FDRE                                         r  genblk1[4].note_proc_inst/count_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 genblk1[4].note_proc_inst/count_reg[7]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            genblk1[4].note_proc_inst/count_reg[7]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.369ns  (logic 0.249ns (67.424%)  route 0.120ns (32.576%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y64          FDRE                         0.000     0.000 r  genblk1[4].note_proc_inst/count_reg[7]/C
+    SLICE_X3Y64          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  genblk1[4].note_proc_inst/count_reg[7]/Q
+                         net (fo=4, routed)           0.120     0.261    genblk1[4].note_proc_inst/count_reg[7]
+    SLICE_X3Y64          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.369 r  genblk1[4].note_proc_inst/count_reg[4]_i_1__2/O[3]
+                         net (fo=1, routed)           0.000     0.369    genblk1[4].note_proc_inst/count_reg[4]_i_1__2_n_4
+    SLICE_X3Y64          FDRE                                         r  genblk1[4].note_proc_inst/count_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 genblk1[0].note_proc_inst/count_reg[11]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            genblk1[0].note_proc_inst/count_reg[11]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
   Data Path Delay:        0.369ns  (logic 0.249ns (67.412%)  route 0.120ns (32.588%))
@@ -852,33 +846,13 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X11Y67         FDRE                         0.000     0.000 r  genblk1[3].note_proc_inst/count_reg[3]/C
-    SLICE_X11Y67         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  genblk1[3].note_proc_inst/count_reg[3]/Q
-                         net (fo=4, routed)           0.120     0.261    genblk1[3].note_proc_inst/count_reg[3]
-    SLICE_X11Y67         CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.108     0.369 r  genblk1[3].note_proc_inst/count_reg[0]_i_1__1/O[3]
-                         net (fo=1, routed)           0.000     0.369    genblk1[3].note_proc_inst/count_reg[0]_i_1__1_n_4
-    SLICE_X11Y67         FDRE                                         r  genblk1[3].note_proc_inst/count_reg[3]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 tcount_reg[6]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            tcount_reg[6]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.372ns  (logic 0.252ns (67.654%)  route 0.120ns (32.346%))
-  Logic Levels:           2  (CARRY4=1 FDRE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X3Y81          FDRE                         0.000     0.000 r  tcount_reg[6]/C
-    SLICE_X3Y81          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  tcount_reg[6]/Q
-                         net (fo=2, routed)           0.120     0.261    tcount_reg[6]
-    SLICE_X3Y81          CARRY4 (Prop_carry4_S[2]_O[2])
-                                                      0.111     0.372 r  tcount_reg[4]_i_1/O[2]
-                         net (fo=1, routed)           0.000     0.372    tcount_reg[4]_i_1_n_5
-    SLICE_X3Y81          FDRE                                         r  tcount_reg[6]/D
+    SLICE_X7Y50          FDRE                         0.000     0.000 r  genblk1[0].note_proc_inst/count_reg[11]/C
+    SLICE_X7Y50          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  genblk1[0].note_proc_inst/count_reg[11]/Q
+                         net (fo=4, routed)           0.120     0.261    genblk1[0].note_proc_inst/count_reg[11]
+    SLICE_X7Y50          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.369 r  genblk1[0].note_proc_inst/count_reg[8]_i_1__6/O[3]
+                         net (fo=1, routed)           0.000     0.369    genblk1[0].note_proc_inst/count_reg[8]_i_1__6_n_4
+    SLICE_X7Y50          FDRE                                         r  genblk1[0].note_proc_inst/count_reg[11]/D
   -------------------------------------------------------------------    -------------------
 
 

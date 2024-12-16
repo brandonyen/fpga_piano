@@ -32,7 +32,7 @@ module note_proc (
                 2'b11: audio_data = index - 16383;  // 4th quadrant
             endcase
         end else begin
-            audio_data = 14'd0;
+            audio_data = 16'd0;
         end
     end
 
