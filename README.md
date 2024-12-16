@@ -1,10 +1,19 @@
 ## Final Project: FPGA Piano
+Allows the FPGA to generate audio signals corresponding to musical notes when switches are pressed, which are output through the DAC as analog audio
  - dac_if module
-   - ab the module
+   - Takes 16-bit parallel stereo data and converts it to the serial format required by the digital to analog converter
  - note_proc module
-    - ab the module
+    - Generates a waveform corresponding to a specific pitch
+    - The count variable accumulates the pitch value at every clock cycle, determining the waveform frequency
+    - audio_data: 16-bit signed output representing the waveform's current amplitude
+    - The waveform is split into 4 quadrants, using the upper 2 bits (quad) of the phase (count[15:14]):
+      - 00: Positive ramp.
+      - 01: Negative ramp.
+      - 10: Negative ramp (inverted).
+      - 11: Positive ramp (inverted).
+    - Depending on the quad value, the audio_data output approximates a triangular waveform
  - piano module
-    - ab the module
+    - Top-level module that integrates all components, manages timing, mixes audio data, and sends it to the DAC
 ## 1. Create a new RTL project in Vivado Quick Start
  - Chose Verilog for both the target and simulator language 
  - Create four new source files of file type SystemVerilog called dac_if, note_proc, and piano
