@@ -1,5 +1,6 @@
 ## Final Project: FPGA Piano
-Allows the FPGA to generate audio signals corresponding to musical notes when switches are pressed, which are output through the DAC as analog audio
+Allows the FPGA to generate audio signals corresponding to musical notes when switches are pressed, which are output through the DAC as analog audio. This is an extension of Lab 5.
+
  - dac_if module
    - Takes 16-bit parallel stereo data and converts it to the serial format required by the digital to analog converter
    - Same as Lab 5's dac_if
@@ -15,17 +16,44 @@ Allows the FPGA to generate audio signals corresponding to musical notes when sw
     - Depending on the quad value, the audio_data output approximates a triangular waveform
  - piano module
     - Top-level module that integrates all components, manages timing, mixes audio data, and sends it to the DAC
-## 1. Create a new RTL project in Vivado Quick Start
- - Chose Verilog for both the target and simulator language 
- - Create four new source files of file type SystemVerilog called dac_if, note_proc, and piano
- - Create a new constraint file of file type XDC called piano
- - Choose Nexys A7-100T board for the project
- - Click 'Finish'
- - Click design sources and copy the VHDL code from dac_if.sv, note_proc.sv, piano.sv
- - Click constraints and copy the code from piano.xdc
-## 2. Run synthesis
-## 3. Run implementation
-## 4. Generate bitstream, open hardware manager, and program device
- - Click 'Generate Bitstream'
- - Click 'Open Hardware Manager' and click 'Open Target' then 'Auto Connect'
- - Click 'Program Device' then xc7a100t_0 to download siren.bit to the Nexys A7-100T board
+
+## Expected Behavior
+The 8 switches on the left side of the board each control one note - the leftmost switch represents middle C, the next switch represents D, then E, etc.
+
+Notes continue to play as long as the switch is active. Multiple notes can also be played, but playing 3 or more notes creates a distorted sound.
+
+## Necessary Hardware
+- Nexys A7-100T FPGA Board
+- Pmod I2S2 module
+- Speakers
+
+## Compiling/Execution Instructions
+- Files in this repository should be the only ones necessary to run in Vivado
+- The source files and constraints are in the srcs folder
+
+## Project I/O
+Inputs
+- 50 MHz clock
+- NEW: 8 bit logic array where each bit corresponds to a switch on the board
+
+Outputs
+- dac_MCLK - output to the DAC
+- dac_LRCK - left-right clock
+- dac_SCLK - serial clock
+- dac_SDIN - serial data input to DAC
+
+## Video
+todo add video link
+
+## Modifications and Difficulties
+The starter code for this project was from Lab 5. 
+
+We started by trying to generate one note, which was actually very difficult. We kept the tone and wail modules, but instead of using the clock to modulate between the low and high pitches, we simply set the pitch to the input pitch (the frequency of the note). We only had one instance of the note_proc module, and the input was controlled by the leftmost switch on the board. 
+
+Then we moved on to implementing 13 keys - one octave, flat and sharp notes included. This was later changed to be 8 notes for simplicity. We declared a logic array of the pitches of each of the notes, based on the table here: https://www.seventhstring.com/resources/notefrequencies.html
+
+Next, we generated 8 different note_proc modules, one for each note. Originally, we had all the modules' output set to data_L. After a lot of headaches/issues compiling, we realized that if more than one switch was active, multiple data values were being written to data_L and the board would not know which one to use.
+
+To fix this, we created an array to store 8 16-bit signed data values. Then, we created a variable mixed_audio, which was the sum of all of the data outputs from the note_proc modules. If the switch for that note was active, it would output data, if not, it would be set to 0.
+
+We started to get multiple notes to work, but playing more than one note at a time created a distorted sound. Eventually we realized that the data values were probably reaching the boundaries of a 16 bit signed integer, so we scaled down the output by a factor of 2 by shifting it one bit to the right.
