@@ -61,6 +61,20 @@ We started to get multiple notes to work, but playing more than one note at a ti
 ## Contributions and Timeline
 The work was done together in-person, with the workload being split equally. However, Brandon worked on fixing the distortion caused by playing multiple notes and Melody worked on displaying the number of notes being played on the 7-segment display.
 
+Brandon
+- Add source files and reorganize file structure
+- Allowing multiple notes to be played at once
+- Generating multiple instances of notes
+- (Partially) fixing distortion caused by playing multiple notes
+- Add to README.md
+
+Melody
+- Implementing one note functionality
+- Connecting switches to input
+- Generating multiple instances of notes
+- Displaying number of notes being played on 7-segment display
+- Add to README.md
+
 Timeline
 - Dec 10: Initial concept and adding base files
 - Dec 14: Added one note functionality/connection to switches
