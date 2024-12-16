@@ -31,7 +31,7 @@ The 7 segment display shows how many switches are currently active (0 through 8)
 
 ## Compiling/Execution Instructions
 - Files in this repository should be the only ones necessary to run in Vivado
-- The source files and constraints are in the srcs folder
+- In case the project does not open, the source files and constraints are in the srcs folder and can be added manually to a Vivado RTL project
 
 ## Project I/O
 Inputs
