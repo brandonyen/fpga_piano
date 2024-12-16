@@ -47,7 +47,7 @@ Outputs
 - NEW: seg - segment output for 7 segment display
 
 ## Video
-todo add video link
+[Link to video](https://drive.google.com/file/d/1NB7XC2d79gPRcvojGQ1xbmKFrrjxvC-R/view?usp=sharing)
 
 ## Modifications and Difficulties
 The starter code for this project was from Lab 5. 
