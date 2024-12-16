@@ -69,4 +69,4 @@ Timeline
 
 ## Future Improvements
 - Fix distortion caused by playing 3 or more notes
-- - test
+  - test
