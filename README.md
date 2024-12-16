@@ -22,6 +22,8 @@ The 8 switches on the left side of the board each control one note - the leftmos
 
 Notes continue to play as long as the switch is active. Multiple notes can also be played, but playing 3 or more notes creates a distorted sound.
 
+The 7 segment display shows how many switches are currently active (0 through 8).
+
 ## Necessary Hardware
 - Nexys A7-100T FPGA Board
 - Pmod I2S2 module
@@ -41,6 +43,8 @@ Outputs
 - dac_LRCK - left-right clock
 - dac_SCLK - serial clock
 - dac_SDIN - serial data input to DAC
+- NEW: anode - anode output for 7 segment display
+- NEW: seg - segment output for 7 segment display
 
 ## Video
 todo add video link
@@ -57,6 +61,8 @@ Next, we generated 8 different note_proc modules, one for each note. Originally,
 To fix this, we created an array to store 8 16-bit signed data values. Then, we created a variable mixed_audio, which was the sum of all of the data outputs from the note_proc modules. If the switch for that note was active, it would output data, if not, it would be set to 0.
 
 We started to get multiple notes to work, but playing more than one note at a time created a distorted sound. Eventually we realized that the data values were probably reaching the boundaries of a 16 bit signed integer, so we scaled down the output by a factor of 2 by shifting it one bit to the right.
+
+Finally, we implemented the 7 segment display to show how many switches are currently active. We used the leddec.sv file from Lab 1, and had a running count that kept track of how many switches were active. Then, we passed that value into the leddec module as the data value.
 
 ## Contributions and Timeline
 The work was done together in-person, with the workload being split equally. However, Brandon worked on fixing the distortion caused by playing multiple notes and Melody worked on displaying the number of notes being played on the 7-segment display.
