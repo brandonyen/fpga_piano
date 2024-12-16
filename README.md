@@ -83,6 +83,6 @@ Timeline
 
 ## Future Improvements
 - Fix distortion caused by playing 3 or more notes
- - This could be caused by weird timing differences, out-of-boundary values for 16 bit signed integers, switch debouncing, or lack of audio scaling for multiple notes
+  - This could be caused by weird timing differences, out-of-boundary values for 16 bit signed integers, switch debouncing, or lack of audio scaling for multiple notes
 - Add flat/sharp notes
 - Use a keypad/keyboard instead of the switches
