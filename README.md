@@ -57,3 +57,25 @@ Next, we generated 8 different note_proc modules, one for each note. Originally,
 To fix this, we created an array to store 8 16-bit signed data values. Then, we created a variable mixed_audio, which was the sum of all of the data outputs from the note_proc modules. If the switch for that note was active, it would output data, if not, it would be set to 0.
 
 We started to get multiple notes to work, but playing more than one note at a time created a distorted sound. Eventually we realized that the data values were probably reaching the boundaries of a 16 bit signed integer, so we scaled down the output by a factor of 2 by shifting it one bit to the right.
+
+## Contributions and Timeline
+Most of the work was done together in-person, but each member was responsible for implementing certain features:
+
+Brandon
+- Add source files and reorganize file structure
+- Generating multiple instances of notes
+- Allowing multiple notes to be played at once
+- (Partially) fixing distortion caused by playing multiple notes
+- Add to README.md
+
+Melody
+- Implementing one note functionality
+- Connecting switches to input
+- Displaying number of notes being played on 7-segment display
+- Add to README.md
+
+Timeline
+- Dec 10: Initial concept and adding base files
+- Dec 14: Added one note functionality/connection to switches
+- Dec 15: Added 8 notes and multi-note playing functionality
+- Dec 16: Added the display to show the number of notes currently being played
