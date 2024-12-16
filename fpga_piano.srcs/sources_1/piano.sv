@@ -1,6 +1,6 @@
 module piano (
     input logic clk_50MHz,           // system clock (50 MHz)
-    input logic [12:0] switches,
+    input logic [7:0] switches,
     output logic dac_MCLK,           // outputs to PMODI2L DAC
     output logic dac_LRCK,           // left-right clock
     output logic dac_SCLK,           // serial clock
