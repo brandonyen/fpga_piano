@@ -63,8 +63,8 @@ The work was done together in-person, with the workload being split equally. How
 
 Brandon
 - Add source files and reorganize file structure
-- Allowing multiple notes to be played at once
 - Generating multiple instances of notes
+- Allowing multiple notes to be played at once
 - (Partially) fixing distortion caused by playing multiple notes
 - Add to README.md
 
